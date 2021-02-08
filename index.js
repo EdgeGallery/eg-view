@@ -1,22 +1,24 @@
 import BgBreadCrumb from './src/components/BgBreadCrumb'
 import Banner from './src/components/Banner'
-import _Vue from 'vue'
 
-BgBreadCrumb.install = Vue => {
-  if (!Vue) {
-    window.Vue = Vue = _Vue
-  }
-  Vue.component(BgBreadCrumb.name, BgBreadCrumb)
+const components = [
+  BgBreadCrumb,
+  Banner
+];
+const install = function(Vue, opts = {}) {
+  locale.use(opts.locale);
+  locale.i18n(opts.i18n);
+
+  components.forEach(component => {
+    Vue.component(component.name, component);
+  });
+};
+/* istanbul ignore if */
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
 }
 
-Banner.install = Vue => {
-  if (!Vue) {
-    window.Vue = Vue = _Vue
-  }
-  Vue.component(Banner.name, Banner)
-}
-
-export default {
+export{
   BgBreadCrumb,
   Banner
 }
