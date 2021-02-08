@@ -17,6 +17,7 @@
 <script>
 
 export default {
+  name: 'bg-bread-crumb',
   components: {},
   data () {
     return {
@@ -24,7 +25,8 @@ export default {
   },
   props: {
     data: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   },
   computed: {},

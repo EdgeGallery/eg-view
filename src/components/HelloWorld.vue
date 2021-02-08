@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BgBreadCrumb from './BGBreadCrumb.vue'
+import BgBreadCrumb from './BGBreadCrumb'
 export default {
   components: { BgBreadCrumb },
   name: 'HelloWorld',
