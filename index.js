@@ -1,9 +1,9 @@
-import BgBreadCrumb from './src/components/BgBreadCrumb'
-import Banner from './src/components/Banner'
+import EgBreadCrumb from './src/components/EgBreadCrumb'
+import EgBanner from './src/components/EgBanner'
 
 const components = [
-  BgBreadCrumb,
-  Banner
+  EgBreadCrumb,
+  EgBanner
 ];
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
@@ -19,6 +19,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export{
-  BgBreadCrumb,
-  Banner
+  EgBreadCrumb,
+  EgBanner
 }

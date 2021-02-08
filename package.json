@@ -1,7 +1,7 @@
 {
   "name": "components-fe",
   "version": "1.0.4",
-  "description": "A Vue.js project",
+  "description": "common components for EdgeGallery projects.",
   "author": "周文敬 <942517636@qq.com>",
   "private": false,
   "scripts": {

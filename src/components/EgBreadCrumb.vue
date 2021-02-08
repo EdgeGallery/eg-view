@@ -17,7 +17,7 @@
 <script>
 
 export default {
-  name: 'bg-bread-crumb',
+  name: 'eg-bread-crumb',
   components: {},
   data () {
     return {

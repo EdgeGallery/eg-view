@@ -27,6 +27,7 @@
 <script>
 
 export default {
+  name: 'eg-banner',
   components: {},
   props: {
     imageUrl: {

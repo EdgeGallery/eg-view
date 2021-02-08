@@ -1,4 +1,10 @@
 /* 面包屑归一化 */
+.el-breadcrumb__item {
+  float: left;
+}
+.el-breadcrumb__item:last-child .el-breadcrumb__separator {
+  display: none;
+}
 .el-breadcrumb__item:last-child .el-breadcrumb__inner,  .el-breadcrumb__item:last-child .el-breadcrumb__inner a,  .el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover,  .el-breadcrumb__item:last-child .el-breadcrumb__inner:hover{
   font-weight: normal !important;
   color: #1c1c1c !important;

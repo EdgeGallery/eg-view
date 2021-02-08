@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
-    <bg-bread-crumb :data="crumbData" />
-    <banner />
+    <eg-bread-crumb :data="crumbData" />
+    <eg-banner />
   </div>
 </template>
 
 <script>
-import Banner from './Banner.vue'
-import BgBreadCrumb from './BGBreadCrumb'
+import EgBanner from './EgBanner'
+import EgBreadCrumb from './EgBreadCrumb'
 export default {
-  components: { BgBreadCrumb, Banner },
+  components: { EgBreadCrumb, EgBanner },
   name: 'HelloWorld',
   data () {
     return {
