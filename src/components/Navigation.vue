@@ -39,6 +39,7 @@
         :md="12"
         class="nav-list"
       >
+		<!-- 响应式-PC端菜单项 -->
         <div />
       </el-col>
       <el-col
@@ -47,6 +48,7 @@
         :sm="10"
         :xs="11"
       >
+		<!-- 右侧功能区 -->
         <div class="nav-tabs" />
       </el-col>
     </el-row>
