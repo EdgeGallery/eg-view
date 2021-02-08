@@ -1,13 +1,15 @@
 <template>
   <div class="hello">
     <bg-bread-crumb :data="crumbData" />
+    <banner />
   </div>
 </template>
 
 <script>
+import Banner from './Banner.vue'
 import BgBreadCrumb from './BGBreadCrumb'
 export default {
-  components: { BgBreadCrumb },
+  components: { BgBreadCrumb, Banner },
   name: 'HelloWorld',
   data () {
     return {
