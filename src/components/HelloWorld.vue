@@ -2,6 +2,7 @@
   <div class="hello">
     <eg-bread-crumb :data="crumbData" />
     <eg-banner />
+    <el-button type="primary">主要按钮</el-button>
   </div>
 </template>
 
