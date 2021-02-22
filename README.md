@@ -32,7 +32,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 提供了一套EdgeGallery风格的主题样式
 
 ### 样例
-![样例-界面主题样式]](./src/assets/images/界面主题色.png)
+![样例-界面主题样式](/src/assets/images/界面主题色.png)
 
 ## 横幅广告
 
