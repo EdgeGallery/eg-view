@@ -1,13 +1,16 @@
 <template>
   <div class="hello">
-    <bg-bread-crumb :data="crumbData" />
+    <eg-bread-crumb :data="crumbData" />
+    <eg-banner />
+    <el-button type="primary">主要按钮</el-button>
   </div>
 </template>
 
 <script>
-import BgBreadCrumb from './BGBreadCrumb'
+import EgBanner from './EgBanner'
+import EgBreadCrumb from './EgBreadCrumb'
 export default {
-  components: { BgBreadCrumb },
+  components: { EgBreadCrumb, EgBanner },
   name: 'HelloWorld',
   data () {
     return {

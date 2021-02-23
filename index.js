@@ -1,11 +1,24 @@
-import BgBreadCrumb from './src/components/BgBreadCrumb'
-import _Vue from 'vue'
+import EgBreadCrumb from './src/components/EgBreadCrumb'
+import EgBanner from './src/components/EgBanner'
 
-BgBreadCrumb.install = Vue => {
-  if (!Vue) {
-    window.Vue = Vue = _Vue
-  }
-  Vue.component(BgBreadCrumb.name, BgBreadCrumb)
+const components = [
+  EgBreadCrumb,
+  EgBanner
+];
+const install = function(Vue, opts = {}) {
+  locale.use(opts.locale);
+  locale.i18n(opts.i18n);
+
+  components.forEach(component => {
+    Vue.component(component.name, component);
+  });
+};
+/* istanbul ignore if */
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
 }
 
-export default BgBreadCrumb
+export{
+  EgBreadCrumb,
+  EgBanner
+}
