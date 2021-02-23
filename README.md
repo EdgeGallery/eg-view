@@ -26,6 +26,8 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 - [面包屑](#面包屑)
 
+- [模态框](#模态框)
+
 
 ## 界面主题样式
 基于Element UI主题，提供了一套EdgeGallery风格的主题样式
@@ -65,3 +67,10 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
 |data|面包屑数据|Array，如 [{name: '首页',path: '/'}, {name: '内部页',path: '/innerPage'}]| -|[] |
+## 模态框
+基于Element UI的模态框，对模态框组件进行了样式修改，包括title、body、footer，button-group等，方便开发和统一样式。
+
+### 样例
+![样例-模态框图片](/src/assets/images/模态框.png)
+### 参数列表
+NA
