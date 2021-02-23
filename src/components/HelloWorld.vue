@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
+    <eg-banner :image-url="bannerImageUrl"/>
     <eg-bread-crumb :data="crumbData" />
-    <eg-banner />
     <el-button type="primary">主要按钮</el-button>
   </div>
 </template>
@@ -21,7 +21,8 @@ export default {
       }, {
         name: '内部页',
         path: '/innerPage'
-      }]
+      }],
+      bannerImageUrl: 'images/静态横幅.png'
     }
   }
 }
