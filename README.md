@@ -71,6 +71,6 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 基于Element UI的模态框，对模态框组件进行了样式修改，包括title、body、footer，button-group等，方便开发和统一样式。
 
 ### 样例
-![样例-模态框图片](https://gitee.com/edgegallery/eg-view/blob/master/src/assets/images/模态框.png)
+![样例-模态框图片](/src/assets/images/模态框.png)
 ### 参数列表
 NA
