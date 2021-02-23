@@ -79,3 +79,26 @@
 .el-textarea__inner{
   height: 40px;
 }
+/* 表格背景和宽高归一化*/
+.headerStyle{
+  background: #e1e7f5!important;
+  color: #575d6c!important;
+  border-right: 2px solid #fff!important;
+  padding: 0!important;
+  height: 40px!important;
+  line-height: 40px!important;
+  font-size: 14px!important;
+}
+.el-table td{
+  padding: 0!important;
+  height: 60px!important;
+  line-height: 60px!important;
+}
+.el-popover__reference{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hiddenClass{
+  white-space: nowrap;
+}
