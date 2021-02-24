@@ -66,6 +66,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 ### 样例
 ![样例-面包屑图片](/src/assets/images/面包屑.png)
+样例代码详细见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
