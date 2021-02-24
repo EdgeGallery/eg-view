@@ -5,6 +5,75 @@
       <el-row>
         <el-col :span="24">
           <el-table
+            :data="tableData_noData"
+            border
+            style="width: 100%"
+            header-cell-class-name="headerStyle">
+            <el-table-column
+              prop="date"
+              label="日期">
+            </el-table-column>
+            <el-table-column
+              prop="name"
+              label="姓名">
+            </el-table-column>
+            <el-table-column
+              prop="province"
+              label="省份">
+            </el-table-column>
+            <el-table-column
+              prop="city"
+              label="市区">
+            </el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="300">
+              <template slot-scope="scope">
+                <el-popover
+                  placement="bottom"
+                  width="300"
+                  trigger="hover"
+                  v-if="scope.row.address.length>24"
+                >
+                  <div>{{ scope.row.address }}</div>
+                  <div slot="reference">
+                    {{ scope.row.address }}
+                  </div>
+                </el-popover>
+                <div v-else>
+                  {{ scope.row.address }}
+                </div>
+              </template>
+            </el-table-column>
+            <el-table-column
+              prop="zip"
+              label="邮编">
+            </el-table-column>
+            <el-table-column
+              label="操作">
+              <template slot-scope="scope">
+                <el-button @click="handleClick(scope.row)" type="text">查看</el-button>
+                <el-button type="text">编辑</el-button>
+              </template>
+            </el-table-column>
+            <template slot="empty">
+              <div>
+                <img
+                  src="../assets/images/empty.png"
+                  alt=""
+                  style="padding: 10px;"
+                >
+                <p>暂无数据</p>
+              </div>
+            </template>
+          </el-table>
+        </el-col>
+      </el-row>
+      <h2/>
+      <el-row>
+        <el-col :span="24">
+          <el-table
             :data="tableData"
             border
             style="width: 100%"
@@ -114,6 +183,7 @@ export default {
         name: '内部页',
         path: '/innerPage'
       }],
+      tableData_noData: [],
       tableData: [{
         date: '2016-05-02',
         name: '王小虎',
