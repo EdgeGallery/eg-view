@@ -44,7 +44,8 @@
   color:#000 !important;
 }
 .el-dialog__body{
-  padding:10px 20px 0;
+  padding:10px 20px 0 !important;
+  /* padding: 12px 20px; */
   color:#000;
 }
 .dialog-footer{
@@ -52,9 +53,6 @@
   padding: 0px!important;
   text-align: right;
   display: block;
-}
-.el-dialog__body{
-  padding: 12px 20px;
 }
 .el-button{
   margin-right: 0px!important;
