@@ -82,7 +82,6 @@ NA
 
 ### 样例
 ![样例-表格暂无数据图片](/src/assets/images/表格无数据.png)
-
 ![样例-表格数据溢出图片](/src/assets/images/表格有数据.png)
 
 ### 参数列表
