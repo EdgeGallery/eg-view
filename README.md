@@ -28,6 +28,8 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 - [模态框](#模态框)
 
+- [表格](#表格)
+
 
 ## 界面主题样式
 基于Element UI主题，提供了一套EdgeGallery风格的主题样式
@@ -49,7 +51,9 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 ### 静态横幅广告
 静态横幅广告组件可以呈现单张横幅图片。组件名称为：EgBanner
 #### 样例
+
 ![样例-静态横幅图片](/src/assets/images/静态横幅.png)
+样例代码见[pages/Home.vue](/src/pages/Home.vue)
 #### 参数列表
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
@@ -62,6 +66,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 ### 样例
 ![样例-面包屑图片](/src/assets/images/面包屑.png)
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
@@ -71,5 +76,16 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 ### 样例
 ![样例-模态框图片](/src/assets/images/模态框.png)
+### 参数列表
+NA
+
+## 表格
+基于Element UI的模态框，对表格组件进行了样式修改，包括宽高,背景色，内容过多溢出悬浮显示等，方便开发和统一样式。
+
+### 样例
+![样例-表格暂无数据图片](/src/assets/images/表格无数据.png)
+![样例-表格数据](/src/assets/images/表格有数据.PNG)
+
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 NA

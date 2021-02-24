@@ -47,4 +47,7 @@ export default {
 }
 </script>
 <style lang='less' scoped>
+  .bread-crumb {
+    padding: 0 56px;
+  }
 </style>
