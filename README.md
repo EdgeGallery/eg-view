@@ -53,7 +53,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 #### 样例
 
 ![样例-静态横幅图片](/src/assets/images/静态横幅.png)
-样例代码详细见[pages/Home.vue](/src/pages/Home.vue)
+样例代码见[pages/Home.vue](/src/pages/Home.vue)
 #### 参数列表
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
@@ -66,7 +66,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 ### 样例
 ![样例-面包屑图片](/src/assets/images/面包屑.png)
-样例代码详细见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
@@ -86,6 +86,6 @@ NA
 ![样例-表格暂无数据图片](/src/assets/images/表格无数据.png)
 ![样例-表格数据](/src/assets/images/表格有数据.PNG)
 
-样例代码详细见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 NA
