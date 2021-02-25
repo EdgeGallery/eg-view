@@ -78,7 +78,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 ![样例-模态框图片-对话框](/src/assets/images/模态框1.png)
 ![样例-模态框图片-表单](/src/assets/images/模态框2.png)
 
-样式代码见[style/normal.css](/src/assets/style/normal.css)
+样式代码见[style/normal.css](/src/assets/style/normal.css)  
 样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 NA
