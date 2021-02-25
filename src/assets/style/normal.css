@@ -77,6 +77,9 @@
 .el-textarea__inner{
   height: 40px;
 }
+.line{
+  text-align: center;
+}
 /* 表格背景和宽高归一化*/
 .headerStyle{
   background: #e1e7f5!important;

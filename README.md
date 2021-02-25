@@ -75,12 +75,16 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 基于Element UI的模态框，对模态框组件进行了样式修改，包括title、body、footer，button-group等，方便开发和统一样式。
 
 ### 样例
-![样例-模态框图片](/src/assets/images/模态框.png)
+![样例-模态框图片-对话框](/src/assets/images/模态框1.png)
+![样例-模态框图片-表单](/src/assets/images/模态框2.png)
+
+样式代码见[style/normal.css](/src/assets/style/normal.css)
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 NA
 
 ## 表格
-基于Element UI的模态框，对表格组件进行了样式修改，包括宽高,背景色，内容过多溢出悬浮显示等，方便开发和统一样式。
+基于Element UI的表格组件，对表格组件进行了样式修改，包括宽高,背景色，内容过多溢出悬浮显示等，方便开发和统一样式。
 
 ### 样例
 ![样例-表格暂无数据图片](/src/assets/images/表格无数据.png)
