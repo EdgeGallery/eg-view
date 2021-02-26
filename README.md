@@ -93,3 +93,25 @@ NA
 样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
 ### 参数列表
 NA
+
+## 分页组件
+基于Element UI的分页组件，对分页组件进行了封装，方便开发和统一样式。组件名称为：EgPagination
+
+### 样例
+![样例-分页组件](/src/assets/images/分页组件.png)
+
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
+
+### 参数列表
+|参数|说明|类型|可选值|默认值|
+|:-|:-|:-|:-|:-|
+|pageNum|当前页码|number| -|1 |
+|pageSize|每页条数的基础值，分页组件每页数量可选值为pageSize * (1 ~ 4)|number| -| 10|
+|total|共total条|number| -| 0|
+
+### 事件
+|事件|说明|回调参数|
+|:-|:-|:-|
+|sizeChange|选择每页条数时会触发|选中的每页条数|
+|currentChange|选择当前页时会触发|选中的页码|
+

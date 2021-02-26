@@ -74,7 +74,7 @@
       <el-row>
         <el-col :span="24">
           <el-table
-            :data="tableData"
+            :data="currentPageTableData"
             border
             style="width: 100%"
             header-cell-class-name="headerStyle">
@@ -127,6 +127,14 @@
               </template>
             </el-table-column>
           </el-table>
+          <h2/>
+          <eg-pagination
+            :page-num="pageNum"
+            :page-size="pageSize"
+            :total="total"
+            @sizeChange="sizeChange"
+            @currentChange="currentChange"
+          />
         </el-col>
       </el-row>
       <h2/>
@@ -197,8 +205,9 @@
 
 <script>
 import EgBreadCrumb from '../components/EgBreadCrumb'
+import EgPagination from '../components/EgPagination.vue'
 export default {
-  components: { EgBreadCrumb },
+  components: { EgBreadCrumb, EgPagination },
   data () {
     return {
       crumbData: [{
@@ -210,34 +219,123 @@ export default {
       }],
       tableData_noData: [],
       tableData: [{
-        date: '2016-05-02',
+        date: '2016-05-01',
         name: '王小虎',
         province: '上海',
         city: '普陀区',
         address: '上海市普陀区金沙江路 1518 弄',
         zip: 200333
       }, {
-        date: '2016-05-04',
+        date: '2016-05-02',
         name: '王小虎',
         province: '上海',
         city: '普陀区',
         address: '上海市普陀区金沙江路 1517 弄',
         zip: 200333
       }, {
-        date: '2016-05-01',
+        date: '2016-05-03',
         name: '王小虎',
         province: '上海',
         city: '普陀区',
         address: '上海市普陀区金沙江路 1516 弄 金沙路大厦 F区 幸福小院 F28栋 2单元 201室',
         zip: 200333
       }, {
-        date: '2016-05-03',
+        date: '2016-05-04',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1519 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-05',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1518 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-06',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1517 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-07',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1516 弄 金沙路大厦 F区 幸福小院 F28栋 2单元 201室',
+        zip: 200333
+      }, {
+        date: '2016-05-08',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1519 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-09',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1518 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-10',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1517 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-11',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1516 弄 金沙路大厦 F区 幸福小院 F28栋 2单元 201室',
+        zip: 200333
+      }, {
+        date: '2016-05-12',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1519 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-13',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1518 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-14',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1517 弄',
+        zip: 200333
+      }, {
+        date: '2016-05-15',
+        name: '王小虎',
+        province: '上海',
+        city: '普陀区',
+        address: '上海市普陀区金沙江路 1516 弄 金沙路大厦 F区 幸福小院 F28栋 2单元 201室',
+        zip: 200333
+      }, {
+        date: '2016-05-16',
         name: '王小虎',
         province: '上海',
         city: '普陀区',
         address: '上海市普陀区金沙江路 1519 弄',
         zip: 200333
       }],
+      currentPageTableData: [],
+      pageNum: 1,
+      pageSize: 10,
+      total: 0,
+      curPageSize: 10,
       dialogVisible: false,
       dialogFormVisible: false,
       form: {
@@ -262,6 +360,12 @@ export default {
     }
   },
   methods: {
+    sizeChange (val) {
+      this.curPageSize = val
+    },
+    currentChange (val) {
+      this.pageNum = val
+    },
     handleClick (row) {
       console.log(row)
     },
@@ -271,7 +375,24 @@ export default {
           done()
         })
         .catch(_ => {})
+    },
+    refreshCurrentData () {
+      let start = this.curPageSize * (this.pageNum - 1)
+      let end = this.curPageSize * this.pageNum
+      this.currentPageTableData = this.tableData.slice(start, end)
     }
+  },
+  watch: {
+    pageNum: function () {
+      this.refreshCurrentData()
+    },
+    curPageSize: function () {
+      this.refreshCurrentData()
+    }
+  },
+  mounted () {
+    this.total = this.tableData.length
+    this.refreshCurrentData()
   }
 }
 </script>
