@@ -64,10 +64,6 @@
 .el-form-item{
   margin-bottom: 10px;
 }
-.el-form-item__label{
-  line-height: 15px;
-  padding-bottom: 10px;
-}
 .el-form-item__content{
   line-height: 15px;
 }
