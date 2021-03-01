@@ -35,8 +35,8 @@ export default {
       default: 'logo.png'
     },
     height: {
-      type: String,
-      default: '300'
+      type: Number,
+      default: 300
     }
   },
   data () {

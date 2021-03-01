@@ -58,7 +58,7 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
 |imageUrl|静态横幅图片url（assets目录下的文件）|String| -|logo.png |
-|height|静态横幅高度|String| -| 300|
+|height|静态横幅高度|Number| -| 300|
 ### 动态横幅广告
 动态横幅广告火力开发中，敬请期待。。。
 ## 面包屑
