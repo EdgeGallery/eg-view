@@ -106,7 +106,8 @@ NA
 |参数|说明|类型|可选值|默认值|
 |:-|:-|:-|:-|:-|
 |pageNum|当前页码|number| -|1 |
-|pageSize|每页条数的基础值，分页组件每页数量可选值为pageSize * (1 ~ 4)|number| -| 10|
+|pageSizes|每页条数的可选值|Array| -| [10, 20, 30]|
+|pageSize|当前选择的每页条数|number| -| 10|
 |total|共total条|number| -| 0|
 
 ### 事件
