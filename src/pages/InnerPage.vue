@@ -130,7 +130,8 @@
           <h2/>
           <eg-pagination
             :page-num="pageNum"
-            :page-size="pageSize"
+            :page-size="curPageSize"
+            :page-sizes="pageSizes"
             :total="total"
             @sizeChange="sizeChange"
             @currentChange="currentChange"
@@ -333,7 +334,7 @@ export default {
       }],
       currentPageTableData: [],
       pageNum: 1,
-      pageSize: 10,
+      pageSizes: [10, 20, 30],
       total: 0,
       curPageSize: 10,
       dialogVisible: false,

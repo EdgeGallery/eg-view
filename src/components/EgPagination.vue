@@ -33,6 +33,11 @@ export default {
       default: 10,
       type: Number
     },
+    pageSizes: {
+      required: false,
+      default: () => [10, 20, 30],
+      type: Number
+    },
     pageNum: {
       required: false,
       default: 1,
@@ -40,14 +45,6 @@ export default {
     }
   },
   computed: {
-    pageSizes () {
-      let arr = []
-      for (let i = 1; i < 4; i++) {
-        let size = i * this.pageSize
-        arr.push(size)
-      }
-      return arr
-    }
   },
   methods: {
     sizeChange (val) {
