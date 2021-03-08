@@ -7,7 +7,7 @@
       @current-change="currentChange"
       :page-sizes="pageSizes"
       layout="total, sizes, prev, pager, next, jumper"
-      :current-page.sync="pageNum"
+      :current-page="pageNum"
       :page-size="pageSize"
       :total="total"
     />
