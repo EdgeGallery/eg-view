@@ -1,6 +1,6 @@
 {
   "name": "eg-view",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "common components for EdgeGallery projects.",
   "author": "周文敬 <942517636@qq.com>",
   "private": false,
@@ -76,5 +76,11 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "licenses" : [
+    {
+      "type": "Apache-2.0",
+      "url": "https://opensource.org/licenses/apache2.0.php"
+    }
   ]
 }
