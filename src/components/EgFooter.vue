@@ -181,14 +181,14 @@
       </p>
       <p class="right">
         <el-link
-          :href="language==='cn'?legalNoticeUrl:legalNoticeUrlEn"
+          :href="language==='cn'?copyrightlist.legalNoticeUrl:copyrightlist.legalNoticeUrlEn"
           target="_blank"
         >
           {{ language==='cn'?copyrightlist.legalNotice:copyrightlist.legalNoticeEn }}
         </el-link>
         <span>|</span>
         <el-link
-          :href="language==='cn'?privacyPolicyUrl:privacyPolicyUrlEn"
+          :href="language==='cn'?copyrightlist.privacyPolicyUrl:copyrightlist.privacyPolicyUrlEn"
           target="_blank"
         >
           {{ language==='cn'?copyrightlist.privacyPolicy:copyrightlist.privacyPolicyEn }}
