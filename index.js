@@ -1,11 +1,13 @@
 import EgBreadCrumb from './src/components/EgBreadCrumb'
 import EgBanner from './src/components/EgBanner'
 import EgPagination from './src/components/EgPagination'
+import EgFooter from './src/components/EgFooter.vue'
 
 const components = [
   EgBreadCrumb,
   EgBanner,
-  EgPagination
+  EgPagination,
+  EgFooter
 ];
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
@@ -23,5 +25,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 export{
   EgBreadCrumb,
   EgBanner,
-  EgPagination
+  EgPagination,
+  EgFooter
 }
