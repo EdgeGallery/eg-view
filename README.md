@@ -30,6 +30,8 @@ eg-view提供了如下组件，供EdgeGallery前端开发引用：
 
 - [表格](#表格)
 
+- [底部组件](#底部组件)
+
 
 ## 界面主题样式
 基于Element UI主题，提供了一套EdgeGallery风格的主题样式
@@ -116,3 +118,17 @@ NA
 |sizeChange|选择每页条数时会触发|选中的每页条数|
 |currentChange|选择当前页时会触发|选中的页码|
 
+## 底部组件
+底部组件分为上下两部分，上部分展示的是“关于Edgegallery、资源、开发者、社区介绍、关注我们”等友情链接，下半部分展示的是版权信息及法律声明、政策隐私的链接。组件名称为：EgFooter
+
+### 样例
+![样例-底部组件](/src/assets/images/底部组件.png)
+
+样例代码见[pages/InnerPage.vue](/src/pages/InnerPage.vue)
+### 参数列表
+|参数|说明|类型|可选值|默认值|
+|:-|:-|:-|:-|:-|
+|platformData|关于Edgegallery栏目下除了“Edgegallery官网”，其他要跳转的平台的名称和链接|Array| -|[] |
+|showFullFooterPage|根据路由判断，是否是要显示底部上下两部分的页面|Boolean| -| true|
+|specificBg|根据路由判断，是否是跟底部衔接，需要指定特定背景色的页面|Boolean| -| true|
+|specificBgColor|需要指定的特定的背景色|String| -| #ffffff|
