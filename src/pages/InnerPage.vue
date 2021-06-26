@@ -201,14 +201,25 @@
         <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
       </div>
     </el-dialog>
+    <!-- 底部组件 -->
+    <div class="padding56">
+      <EgFooter
+        v-if="platformData[0].url!==''"
+        :platform-data="platformData"
+        :show-full-footer-page="showFullFooterPage"
+        :specific-bg="specificBg"
+        specific-bg-color="#ffffff"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import EgBreadCrumb from '../components/EgBreadCrumb'
 import EgPagination from '../components/EgPagination.vue'
+import EgFooter from '../components/EgFooter.vue'
 export default {
-  components: { EgBreadCrumb, EgPagination },
+  components: { EgBreadCrumb, EgPagination, EgFooter },
   data () {
     return {
       crumbData: [{
@@ -357,7 +368,23 @@ export default {
       delivery: false,
       type: [],
       resource: '',
-      desc: ''
+      desc: '',
+      platformData: [
+        {
+          name: 'AppStore',
+          url: 'xxx'
+        },
+        {
+          name: 'ATP',
+          url: 'xxx'
+        },
+        {
+          name: 'MECM',
+          url: 'xxx'
+        }
+      ],
+      showFullFooterPage: true,
+      specificBg: true
     }
   },
   methods: {

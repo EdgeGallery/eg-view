@@ -20,7 +20,7 @@
   >
     <div
       class="footer_list"
-      v-if="homePage"
+      v-if="showFullFooterPage"
     >
       <div class="list_div padding_default clear">
         <ul>
@@ -203,31 +203,23 @@ import pageData from '../pageData/footerData.js'
 export default {
   name: 'FooterBar',
   props: {
-    language: {
-      require: true,
-      type: String,
-      default: 'en'
-    },
     // Receive names and links of other platforms, such as:
     // [{name:'Appstore',url:'xxxx'}]
     platformData: {
-      require: true,
       type: Array,
       default: () => []
     },
-    // App.vue page judges the page to be fully displayed at the bottom
-    homePage: {
-      require: true,
+    // According to the routing judgment, whether it is to display the bottom two parts of the page
+    showFullFooterPage: {
       type: Boolean,
       default: true
     },
-    // App.vue page judges the page to add a custom background
+    // According to the routing judgment, whether it is connected to the bottom, you need to specify a page with a specific background color
     specificBg: {
-      require: true,
       type: Boolean,
       default: true
     },
-    // The custom background color to be used for the App.vue page transfer value
+    // Define the specified background color to be used
     specificBgColor: {
       type: String,
       default: '#ffffff'
@@ -235,6 +227,7 @@ export default {
   },
   data () {
     return {
+      language: localStorage.getItem('language'),
       giteeUrl: 'https://gitee.com/edgegallery',
       weiboUrl: 'https://weibo.com/u/7575392977?is_all=1',
       emailUrl: 'https://edgegallery.groups.io/g/main',
