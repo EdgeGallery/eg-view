@@ -364,6 +364,7 @@ export default {
     }
     .el-link{
       color: #fff;
+      text-decoration: none;
     }
     .el-link.el-link--default:after{
       border-color: #fff;
