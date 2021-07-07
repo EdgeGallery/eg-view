@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM swr.ap-southeast-1.myhuaweicloud.com/edgegallery/nginx:latest
+FROM swr.ap-southeast-1.myhuaweicloud.com/eg-common/nginx:stable
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY dist/ /usr/share/nginx/html/
