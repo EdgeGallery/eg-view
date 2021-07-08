@@ -16,7 +16,16 @@
 
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/Home'
+import InstallInstru from '@/pages/InstallInstru'
+import QuikStartInstru from '@/pages/QuikStartInstru'
+import InternationalizationInstru from '@/pages/InternationalizationInstru'
+import ThemeInstru from '@/pages/ThemeInstru'
+import BannerInstru from '@/pages/BannerInstru'
+import BreadcrumbInstru from '@/pages/BreadcrumbInstru'
+import ModalDialogInstru from '@/pages/ModalDialogInstru'
+import TableInstru from '@/pages/TableInstru'
+import FooterInstru from '@/pages/FooterInstru'
+import OverviewInstru from '@/pages/OverviewInstru'
 
 Vue.use(Router)
 
@@ -24,12 +33,52 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'OverviewInstru',
+      component: OverviewInstru
+    },
+    {
+      path: '/0',
+      name: 'OverviewInstru',
+      component: OverviewInstru
     }, {
-      path: '/innerPage',
-      name: 'InnerPge',
-      component: () => import('../pages/InnerPage.vue')
+      path: '/1-1',
+      name: 'InstallInstru',
+      component: InstallInstru
+    }, {
+      path: '/1-2',
+      name: 'QuikStartInstru',
+      component: QuikStartInstru
+    },
+    {
+      path: '/1-3',
+      name: 'InternationalizationInstru',
+      component: InternationalizationInstru
+    }, {
+      path: '/2-1',
+      name: 'ThemeInstru',
+      component: ThemeInstru
+    },
+    {
+      path: '/2-2',
+      name: 'BannerInstru',
+      component: BannerInstru
+    }, {
+      path: '/2-3',
+      name: 'BreadcrumbInstru',
+      component: BreadcrumbInstru
+    },
+    {
+      path: '/2-4',
+      name: 'ModalDialogInstru',
+      component: ModalDialogInstru
+    }, {
+      path: '/2-5',
+      name: 'TableInstru',
+      component: TableInstru
+    }, {
+      path: '/2-6',
+      name: 'FooterInstru',
+      component: FooterInstru
     }
   ]
 })

@@ -14,21 +14,30 @@
  *  limitations under the License.
  */
 
-import Vue from 'vue'
-import App from './App'
-import router from './router/index.js'
-import ElementUI from 'element-ui'
-import './assets/style/normal.css'
-import './assets/style/element-variables.scss'
-import './assets/style/pageInstru.css'
+/* this file is for normalize the introduction style, more specially is for the element in the DOM named 'el-main' */
 
-Vue.config.productionTip = false
-Vue.use(ElementUI)
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
+.el-main p{
+  font-size: 14px;
+  color: #5e6d82;
+  line-height: 1.5em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.el-main pre{
+  line-height: 1.8;
+  font-size: 12px;
+  padding: 18px 24px;
+  background-color: #fafafa;
+  border: 1px solid #eaeefb;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto;
+}
+.el-main h2, .el-main h3, .el-main h4, .el-main h5 {
+  font-weight: 400;
+  color: #1f2f3d;
+}
+.el-main h3{
+  margin: 55px 0 20px;
+  font-size: 22px;
+}
