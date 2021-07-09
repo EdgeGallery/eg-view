@@ -15,23 +15,52 @@
   -->
 <template>
   <div id="app">
-    <router-view/>
+    <div class="container">
+      <el-container>
+        <el-aside width="200px">
+          <Nav />
+        </el-aside>
+        <el-container>
+          <el-main>
+            <router-view />
+          </el-main>
+        </el-container>
+      </el-container>
+    </div>
   </div>
 </template>
 
 <script>
+import Nav from './Navigator/Nav'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { Nav }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-align: center; */
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  .container{
+    width: 60%;
+    margin-left: 20%
+  }
+  .el-container {
+    margin-bottom: 40px;
+  }
+  .el-aside {
+    color: #333;
+    text-align: left;
+    height: '100%';
+  }
+  .el-main {
+    color: #333;
+    text-align: left;
+  }
 </style>
