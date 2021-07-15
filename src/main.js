@@ -16,14 +16,33 @@
 
 import Vue from 'vue'
 import App from './App'
-import router from './router/index.js'
+import VueRouter from 'vue-router'
+import routes from './route.config'
 import ElementUI from 'element-ui'
+import hljs from 'highlight.js'
 import './assets/style/normal.css'
 import './assets/style/element-variables.scss'
 import './assets/style/pageInstru.css'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: 'hash',
+  base: __dirname,
+  routes
+})
+
+router.afterEach(route => {
+  // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186
+  Vue.nextTick(() => {
+    const blocks = document.querySelectorAll('pre code:not(.hljs)')
+    Array.prototype.forEach.call(blocks, hljs.highlightBlock)
+  })
+  document.title = 'EgView'
+  // ga('send', 'event', 'PageView', route.name)
+})
 
 /* eslint-disable no-new */
 new Vue({

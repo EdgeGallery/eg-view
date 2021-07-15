@@ -1,0 +1,59 @@
+{
+  "zh-CN": [
+    {
+      "path": "/OverviewInstru",
+      "name": "简介"
+    },
+    {
+      "name": "开发指南",
+      "children": [{
+          "path": "/InstallInstru",
+          "name": "安装"
+        }, {
+          "path": "/QuikStartInstru",
+          "name": "快速上手"
+        },
+        {
+          "path": "/InternationalizationInstru",
+          "name": "国际化"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/ThemeInstru",
+              "title": "主题色"
+            }
+          ]
+        },
+        {
+          "groupName": "Others",
+          "list": [
+            {
+              "path": "/BannerInstru",
+              "name": "横幅广告"
+            }, {
+              "path": "/BreadcrumbInstru",
+              "name": "面包屑"
+            },
+            {
+              "path": "/ModalDialogInstru",
+              "name": "模态框"
+            }, {
+              "path": "/TableInstru",
+              "name": "表格"
+            }, {
+              "path": "/FooterInstru",
+              "name": "页面底部组件"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
