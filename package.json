@@ -9,7 +9,8 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "eslint": "eslint -f checkstyle --ext .js,.vue src -o eslint_result.xml",
-    "build": "node build/build.js"
+    "build": "node build/bin/i18n.js & node build/build.js",
+    "i18n": "node build/bin/i18n.js"
   },
   "dependencies": {
     "element-ui": "^2.15.0",
@@ -18,6 +19,7 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@vue/component-compiler-utils": "^2.6.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
@@ -43,8 +45,14 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "highlight.js": "^9.3.0",
     "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
     "less": "^4.1.1",
+    "markdown-it": "^8.4.1",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-chain": "^1.3.0",
+    "markdown-it-container": "^2.0.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
@@ -58,6 +66,7 @@
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "style-loader": "^2.0.0",
+    "transliteration": "^1.1.11",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
