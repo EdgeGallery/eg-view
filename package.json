@@ -13,6 +13,7 @@
     "i18n": "node build/bin/i18n.js"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "element-ui": "^2.15.0",
     "less-loader": "^5.0.0",
     "vue": "^2.5.2",
