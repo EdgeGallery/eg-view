@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "eslint": "eslint -f checkstyle --ext .js,.vue src -o eslint_result.xml",
-    "build": "node build/bin/i18n.js & node build/webpack.dev.conf.js & node build/build.js"
+    "build": "node build/bin/i18n.js & node build/build.js"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
