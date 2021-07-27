@@ -20,13 +20,22 @@ import VueRouter from 'vue-router'
 import routes from './route.config'
 import ElementUI from 'element-ui'
 import hljs from 'highlight.js'
-import './assets/style/normal.css'
+import DemoBlock from './pages/components/DemoBlock'
+import SideNav from './pages/components/SideNav'
+import FooterNav from './pages/components/FooterNav'
+import 'highlight.js/styles/color-brewer.css'
+
+import './pages/demo-styles/index.scss'
+import './pages/assets/styles/common.scss'
+
 import './assets/style/element-variables.scss'
-import './assets/style/pageInstru.css'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueRouter)
+Vue.component('demo-block', DemoBlock)
+Vue.component('side-nav', SideNav)
+Vue.component('footer-nav', FooterNav)
 
 const router = new VueRouter({
   mode: 'hash',

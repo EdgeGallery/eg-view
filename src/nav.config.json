@@ -36,20 +36,20 @@
           "list": [
             {
               "path": "/BannerInstru",
-              "name": "横幅广告"
+              "title": "横幅广告"
             }, {
               "path": "/BreadcrumbInstru",
-              "name": "面包屑"
+              "title": "面包屑"
             },
             {
               "path": "/ModalDialogInstru",
-              "name": "模态框"
+              "title": "模态框"
             }, {
               "path": "/TableInstru",
-              "name": "表格"
+              "title": "表格"
             }, {
               "path": "/FooterInstru",
-              "name": "页面底部组件"
+              "title": "页面底部组件"
             }
           ]
         }

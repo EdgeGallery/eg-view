@@ -15,26 +15,13 @@
   -->
 <template>
   <div id="app">
-    <div class="container">
-      <el-container>
-        <el-aside width="200px">
-          <Nav />
-        </el-aside>
-        <el-container>
-          <el-main>
-            <router-view />
-          </el-main>
-        </el-container>
-      </el-container>
-    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Nav from './Navigator/Nav'
 export default {
-  name: 'App',
-  components: { Nav }
+  name: 'App'
 }
 </script>
 
@@ -46,21 +33,5 @@ export default {
     /* text-align: center; */
     color: #2c3e50;
     margin-top: 60px;
-  }
-  .container{
-    width: 60%;
-    margin-left: 20%
-  }
-  .el-container {
-    margin-bottom: 40px;
-  }
-  .el-aside {
-    color: #333;
-    text-align: left;
-    height: '100%';
-  }
-  .el-main {
-    color: #333;
-    text-align: left;
   }
 </style>
