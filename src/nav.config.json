@@ -23,7 +23,7 @@
       "name": "组件",
       "groups": [
         {
-          "groupName": "Basic",
+          "groupName": "基础组件",
           "list": [
             {
               "path": "/ThemeInstru",
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "groupName": "Others",
+          "groupName": "其他",
           "list": [
             {
               "path": "/BannerInstru",
@@ -50,6 +50,63 @@
             }, {
               "path": "/FooterInstru",
               "title": "页面底部组件"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "en-US": [
+    {
+      "path": "/OverviewInstru",
+      "name": "Introduction"
+    },
+    {
+      "name": "Development Guide",
+      "children": [{
+          "path": "/InstallInstru",
+          "name": "Installation"
+        }, {
+          "path": "/QuikStartInstru",
+          "name": "QuickStart"
+        },
+        {
+          "path": "/InternationalizationInstru",
+          "name": "Internationalization"
+        }
+      ]
+    },
+    {
+      "name": "Components",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "path": "/ThemeInstru",
+              "title": "Theme"
+            }
+          ]
+        },
+        {
+          "groupName": "Others",
+          "list": [
+            {
+              "path": "/BannerInstru",
+              "title": "Banner"
+            }, {
+              "path": "/BreadcrumbInstru",
+              "title": "Breadcrumb"
+            },
+            {
+              "path": "/ModalDialogInstru",
+              "title": "Modal Dialog"
+            }, {
+              "path": "/TableInstru",
+              "title": "Table"
+            }, {
+              "path": "/FooterInstru",
+              "title": "Footer"
             }
           ]
         }

@@ -5,6 +5,11 @@ const LOAD_MAP = {
     return r => require.ensure([], () =>
       r(require(`./pages/zh-CN/${name}.vue`)),
     'zh-CN')
+  },
+  'en-US': name => {
+    return r => require.ensure([], () =>
+      r(require(`./pages/en-US/${name}.vue`)),
+    'en-US')
   }
 }
 
@@ -17,6 +22,11 @@ const LOAD_DOCS_MAP = {
     return r => require.ensure([], () =>
       r(require(`./docs/zh-CN${path}.md`)),
     'zh-CN')
+  },
+  'en-US': path => {
+    return r => require.ensure([], () =>
+      r(require(`./docs/en-US${path}.md`)),
+    'en-US')
   }
 }
 
@@ -70,7 +80,11 @@ const registerRoute = (navConfig) => {
 }
 
 let route = registerRoute(navConfig)
-let defaultPath = '/zh-CN/component'
+let userLanguage = window.location.href
+let defaultPath = '/en-US/component'
+if (userLanguage.indexOf('zh-') !== -1) {
+  defaultPath = '/zh-CN/component'
+}
 route = route.concat([{
   path: '/',
   redirect: defaultPath
