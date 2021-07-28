@@ -81,9 +81,9 @@ const registerRoute = (navConfig) => {
 
 let route = registerRoute(navConfig)
 let userLanguage = window.location.href
-let defaultPath = '/en-US/component'
-if (userLanguage.indexOf('zh-') !== -1) {
-  defaultPath = '/zh-CN/component'
+let defaultPath = '/zh-CN/component'
+if (userLanguage.indexOf('en-') !== -1) {
+  defaultPath = '/en-US/component'
 }
 route = route.concat([{
   path: '/',
