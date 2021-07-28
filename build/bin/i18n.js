@@ -2,12 +2,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var langConfig = [{
-  lang: 'zh-CN',
-  pages: {
-    component: {}
-  }
-}];
+var langConfig = require('../../src/pages/i18n/page.json');
 
 langConfig.forEach(lang => {
   try {
