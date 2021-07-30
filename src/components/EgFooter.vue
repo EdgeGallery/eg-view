@@ -199,7 +199,7 @@
 </template>
 
 <script>
-import pageData from '../pageData/footerData.js'
+import pageData from './pageData/footerData.js'
 export default {
   name: 'FooterBar',
   props: {
