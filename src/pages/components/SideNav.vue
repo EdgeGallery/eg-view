@@ -27,42 +27,100 @@
     }
 
     .nav-item {
+      padding-left: 60px;
+      margin: 0 10px;
       a {
-        font-size: 16px;
-        color: #333;
-        line-height: 40px;
-        height: 40px;
+        font-size: 20px;
+        color: #c9c5d0;
+        line-height: 49px;
+        height: 49px;
         margin: 0;
         padding: 0;
         text-decoration: none;
         display: block;
         position: relative;
         transition: .15s ease-out;
-        font-weight: bold;
-
         &.active {
-          color: #409EFF;
+          color: #380879;
+        }
+        &.selectTitle{
+          color: #380879;
         }
       }
+      &:hover a{
+        color: #380879;
+      }
 
-      .nav-item {
+      &:first-child{
+        margin-top: 5px;
+      }
+      &:hover {
+        background: #fff;
+        border-radius: 8px;
+        color: #380879;
+        box-shadow: 0 0 10px 0 rgba(40, 12, 128, 0.1);
+      }
+
+        &.select{
+          background: #fff;
+          border-radius: 8px;
+          color: #380879;
+          box-shadow: 0 0 10px 0 rgb(40, 12, 128,0.1);
+        }
+        &.navimg:first-child{
+          background-image: url('../assets/images/Introduction.png');
+          background-repeat: no-repeat;
+          background-position: 30px 15px;
+        }
+        &.navimg:nth-child(2){
+          background-image: url('../assets/images/Development.png');
+          background-repeat: no-repeat;
+          background-position: 30px 15px;
+        }
+        &.navimg:nth-child(3){
+          background-image: url('../assets/images/Components.png');
+          background-repeat: no-repeat;
+          background-position: 30px 15px;
+        }
+        &.navselectimg:first-child{
+          background-image: url('../assets/images/IntroductionActive.png');
+          background-repeat: no-repeat;
+          background-position: 30px 15px;
+        }
+        &.navselectimg:nth-child(2){
+          background-image: url('../assets/images/DevelopmentActive.png');
+          background-repeat: no-repeat;
+          background-position: 30px 15px;
+        }
+        &.navselectimg:nth-child(3){
+          background-image: url('../assets/images/ComponentsActive.png');
+          background-repeat: no-repeat;
+          background-position: 30px 15px;
+        }
+
+      .nav-item-second {
+        // position:relative;
+        // left: -60px;
         a {
           display: block;
-          height: 40px;
-          color: #444;
-          line-height: 40px;
-          font-size: 14px;
+          height: 30px;
+          color: #7a6e8a;
+          line-height: 30px;
+          font-size: 16px;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
           font-weight: normal;
+          // width: 80%;
 
           &:hover,
           &.active {
-            color: #409EFF;
+            color: #5e40c8;
+            background-image: linear-gradient(to right,#e6e7f3,#f0f0f7);
+            // border-radius: 8px 0 0 8px;
           }
         }
-      }
+      }s
 
       &.sponsors {
         & > .sub-nav {
@@ -123,11 +181,15 @@
     :style="navStyle">
     <ul>
       <li
-        class="nav-item"
-        v-for="(item, key) in data"
-        :key="key">
-        <a v-if="!item.path && !item.href" @click="expandMenu">{{item.name}}</a>
-        <a v-if="item.href" :href="item.href" target="_blank">{{item.name}}</a>
+        class="nav-item navimg"
+        v-for="(item, index) in data"
+        :key="index"
+        @mouseenter="hoverList(index)"
+        @mouseleave="activeInfo=-1"
+        :class="{'navselectimg': activeInfo===index ||selectInfo === index,'select':selectInfo===index}"
+        >
+        <a v-if="!item.path && !item.href" @click="expandMenu" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
+        <a v-if="item.href" :href="item.href" target="_blank" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
         <router-link
           v-if="item.path"
           active-class="active"
@@ -137,7 +199,9 @@
         </router-link>
         <ul class="pure-menu-list sub-nav" v-if="item.children">
           <li
-            class="nav-item"
+            @click="selectList(index)"
+            v-show="activeInfo===index || selectInfo===index"
+            class="nav-item-second"
             v-for="(navItem, key) in item.children"
             :key="key">
             <router-link
@@ -149,7 +213,7 @@
             </router-link>
           </li>
         </ul>
-        <template v-if="item.groups">
+        <!-- <template v-if="item.groups">
           <div
             class="nav-group"
             v-for="(group, key) in item.groups"
@@ -170,7 +234,7 @@
               </li>
             </ul>
           </div>
-        </template>
+        </template> -->
       </li>
     </ul>
   </div>
@@ -192,7 +256,9 @@ export default {
       highlights: [],
       navState: [],
       isSmallScreen: false,
-      isFade: false
+      isFade: false,
+      activeInfo: 0,
+      selectInfo: 0
     }
   },
   watch: {
@@ -220,6 +286,15 @@ export default {
     }
   },
   methods: {
+    hoverList (index) {
+      this.activeInfo = index
+    },
+    selectList (index) {
+      this.selectInfo = index
+    },
+    selectIntro () {
+      this.selectInfo = 0
+    },
     handleResize () {
       this.isSmallScreen = document.documentElement.clientWidth < 768
       this.handlePathChange()

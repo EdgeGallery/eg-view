@@ -18,26 +18,9 @@
     <div
       class="demo-block-control"
       ref="control"
-      :class="{ 'is-fixed': fixedControl }"
       @click="isExpanded = !isExpanded">
-      <transition name="arrow-slide">
-        <i :class="[iconClass, { 'hovering': hovering }]"></i>
-      </transition>
-      <transition name="text-slide">
-        <span v-show="hovering">{{ controlText }}</span>
-      </transition>
-      <el-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
-        <transition name="text-slide">
-          <el-button
-            v-show="hovering || isExpanded"
-            size="small"
-            type="text"
-            class="control-button"
-            @click.stop="goCodepen">
-            {{ langConfig['button-text'] }}
-          </el-button>
-        </transition>
-      </el-tooltip>
+      <span class="control-button">{{ controlText }}</span>
+      <span  @click.stop="goCodepen" class="control-button"> {{ langConfig['button-text'] }}</span>
     </div>
   </div>
 </template>
@@ -45,8 +28,10 @@
 <style lang="scss">
   .demo-block {
     border: solid 1px #ebebeb;
-    border-radius: 3px;
+    border-radius: 8px;
     transition: .2s;
+    background-color: #ececf5;
+    margin-left: 20px;
 
     &.hover {
       box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5);
@@ -75,14 +60,12 @@
     .description {
       padding: 20px;
       box-sizing: border-box;
-      border: solid 1px #ebebeb;
-      border-radius: 3px;
+      border: none;
       font-size: 14px;
       line-height: 22px;
       color: #666;
       word-break: break-word;
-      margin: 10px;
-      background-color: #fff;
+      background-color: #ececf5;
 
       p {
         margin: 0;
@@ -104,7 +87,7 @@
 
     .highlight {
       pre {
-        margin: 0;
+        margin-left: 20px;
       }
 
       code.hljs {
@@ -118,63 +101,17 @@
         }
       }
     }
-
-    .demo-block-control {
-      border-top: solid 1px #eaeefb;
-      height: 44px;
-      box-sizing: border-box;
-      background-color: #fff;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-      text-align: center;
-      margin-top: -1px;
-      color: #d3dce6;
-      cursor: pointer;
-      position: relative;
-
-      &.is-fixed {
-        position: fixed;
-        bottom: 0;
-        width: 868px;
-      }
-
-      i {
-        font-size: 16px;
-        line-height: 44px;
-        transition: .3s;
-        &.hovering {
-          transform: translateX(-40px);
-        }
-      }
-
-      > span {
-        position: absolute;
-        transform: translateX(-30px);
+    .demo-block-control{
+      text-align: right;
+      height: 40px;
+      padding-right: 20px;
+      > span{
+        cursor: pointer;
         font-size: 14px;
-        line-height: 44px;
-        transition: .3s;
-        display: inline-block;
-      }
-
-      &:hover {
-        color: #409EFF;
-        background-color: #f9fafc;
-      }
-
-      & .text-slide-enter,
-      & .text-slide-leave-active {
-        opacity: 0;
-        transform: translateX(10px);
-      }
-
-      .control-button {
-        line-height: 26px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 14px;
-        padding-left: 5px;
-        padding-right: 25px;
+        color: #7a6e8a;
+        background-color:#dfdfef;
+        border-radius: 5px;
+        padding: 5px 7px;
       }
     }
   }

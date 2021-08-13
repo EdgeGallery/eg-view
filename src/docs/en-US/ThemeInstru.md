@@ -10,12 +10,24 @@ import './assets/style/element-variables.scss'
 
 Examples of theme color components:
 
-:::demo Use `type`, `plain`, `round` and `circle` to define Button's style.
+:::demo 
 
 ```html
 <el-row>
-  <el-button>Default Button</el-button>
-  <el-button type="primary">Primary Button</el-button>
+  <el-col :span="5" class="normalbutton">
+      <el-button
+        class="newproject_btn linearGradient"
+        >
+          默认按钮
+      </el-button>
+  </el-col>
+  <el-col :offset="2" :span="5" class="activebutton">
+      <el-button
+        class="newproject_btn linearGradientActive"
+        >
+          主要按钮
+      </el-button>
+  </el-col>
 </el-row>
 ```
 :::

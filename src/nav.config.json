@@ -21,39 +21,27 @@
     },
     {
       "name": "组件",
-      "groups": [
-        {
-          "groupName": "基础组件",
-          "list": [
-            {
-              "path": "/ThemeInstru",
-              "title": "主题色"
-            }
-          ]
-        },
-        {
-          "groupName": "其他",
-          "list": [
-            {
-              "path": "/BannerInstru",
-              "title": "横幅广告"
-            }, {
-              "path": "/BreadcrumbInstru",
-              "title": "面包屑"
-            },
-            {
-              "path": "/ModalDialogInstru",
-              "title": "模态框"
-            }, {
-              "path": "/TableInstru",
-              "title": "表格"
-            }, {
-              "path": "/FooterInstru",
-              "title": "页面底部组件"
-            }
-          ]
-        }
-      ]
+      "children":[{
+          "path": "/ThemeInstru",
+          "name": "主题色"
+          },{
+            "path": "/BannerInstru",
+            "name": "横幅广告"
+          }, {
+            "path": "/BreadcrumbInstru",
+            "name": "面包屑"
+          },
+          {
+            "path": "/ModalDialogInstru",
+            "name": "模态框"
+          }, {
+            "path": "/TableInstru",
+            "name": "表格"
+          }, {
+            "path": "/FooterInstru",
+            "name": "页面底部组件"
+          }
+    ]
     }
   ],
   "en-US": [
@@ -78,37 +66,26 @@
     },
     {
       "name": "Components",
-      "groups": [
+      "children": [
         {
-          "groupName": "Basic",
-          "list": [
-            {
-              "path": "/ThemeInstru",
-              "title": "Theme"
-            }
-          ]
+          "path": "/ThemeInstru",
+          "name": "Theme"
+        },{
+          "path": "/BannerInstru",
+          "name": "Banner"
+        }, {
+          "path": "/BreadcrumbInstru",
+          "name": "Breadcrumb"
         },
         {
-          "groupName": "Others",
-          "list": [
-            {
-              "path": "/BannerInstru",
-              "title": "Banner"
-            }, {
-              "path": "/BreadcrumbInstru",
-              "title": "Breadcrumb"
-            },
-            {
-              "path": "/ModalDialogInstru",
-              "title": "Modal Dialog"
-            }, {
-              "path": "/TableInstru",
-              "title": "Table"
-            }, {
-              "path": "/FooterInstru",
-              "title": "Footer"
-            }
-          ]
+          "path": "/ModalDialogInstru",
+          "name": "Modal Dialog"
+        }, {
+          "path": "/TableInstru",
+          "name": "Table"
+        }, {
+          "path": "/FooterInstru",
+          "name": "Footer"
         }
       ]
     }
