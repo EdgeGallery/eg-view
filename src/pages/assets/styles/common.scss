@@ -6,6 +6,7 @@ html, body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+  background-color: #fbfbfb;
 
   &.is-component {
     overflow: hidden;
@@ -59,15 +60,15 @@ button, input, select, textarea {
 }
 
 .hljs {
-  line-height: 1.8;
+  line-height: 2.2;
   font-family: Menlo, Monaco, Consolas, Courier, monospace;
-  font-size: 12px;
-  padding: 18px 24px;
-  background-color: #fafafa;
-  border: solid 1px #eaeefb;
+  font-size: 14px;
+  color: #8f859b;
+  background-color: #ececf5;
+  border-radius: 8px;
   margin-bottom: 25px;
-  border-radius: 4px;
   -webkit-font-smoothing: auto;
+  margin-left: 20px;
 }
 
 .main-cnt {
@@ -87,17 +88,33 @@ button, input, select, textarea {
 .page-container {
   padding-top: 55px;
 
+  h1{
+    font-size: 26px;
+    color: #5d3da0;
+  }
+
   h2 {
-    font-size: 28px;
-    color: #1f2d3d;
+    font-size: 25px;
+    color: #5d3da0 !important;
     margin: 0;
+    float: left;
+    margin-right: 20px;
   }
   h3 {
-    font-size: 22px;
+    font-size: 20px;
+    color: #8f859b;
+  }
+  h3::before{
+    content: '';
+    display:inline-block;
+    width:6px;
+    height:6px;
+    margin-right:10px;
+    background: #ccc5d9;
+    position: relative;
+    border-radius: 50%;
   }
   h2, h3, h4, h5 {
-    font-weight: normal;
-    color: #1f2f3d;
 
     &:hover a {
       opacity: .4;
@@ -108,6 +125,7 @@ button, input, select, textarea {
       margin-left: -20px;
       opacity: 0;
       cursor: pointer;
+      display: none;
 
       &:hover {
         opacity: .4;
@@ -116,9 +134,10 @@ button, input, select, textarea {
   }
 
   p {
-    font-size: 14px;
-    color: #5e6d82;
+    font-size: 14.42px;
+    color: #8f859b;
     line-height: 1.5em;
+    margin-left: 20px;
   }
 
   .tip {
@@ -145,6 +164,62 @@ button, input, select, textarea {
       background-color: rgba(255, 255, 255, .7);
       color: #445368;
     }
+  }
+  .normalbutton{
+    position: relative;
+  }
+  .activebutton{
+    position: relative;
+  }
+  .newproject_btn{
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 0 35px;
+  }
+  .el-button.linearGradient{
+    background-image: linear-gradient(127deg, #54aaf3, #53dabd);
+    border: none;
+  }
+  .el-button.linearGradientActive{
+    background-image: linear-gradient(127deg, #60a9e7, #4cc1a8);
+    border: none;
+  }
+  .el-button.linearGradient span{
+    position: relative;
+    z-index: 2;
+  }
+  .el-button.linearGradientActive span{
+    position: relative;
+    z-index: 2;
+  }
+  .el-button.linearGradient::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: inherit;
+    filter: blur(0.65rem);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .el-button.linearGradientActive::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: inherit;
+    filter: blur(0.65rem);
+    opacity: 0.7;
+    z-index: 1;
+  }
+  .el-button:focus, .el-button:hover{
+    color: #fff;
   }
 }
 .demo {

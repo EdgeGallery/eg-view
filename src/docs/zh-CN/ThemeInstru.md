@@ -10,12 +10,24 @@ import './assets/style/element-variables.scss'
 
 主题色组件示例：
 
-:::demo 使用`type`、`plain`、`round`和`circle`属性来定义 Button 的样式。
+:::demo 
 
 ```html
 <el-row>
-  <el-button>默认按钮</el-button>
-  <el-button type="primary">主要按钮</el-button>
+  <el-col :span="5" class="normalbutton">
+      <el-button
+        class="newproject_btn linearGradient"
+        >
+          默认按钮
+      </el-button>
+  </el-col>
+  <el-col :offset="2" :span="5" class="activebutton">
+      <el-button
+        class="newproject_btn linearGradientActive"
+        >
+          主要按钮
+      </el-button>
+  </el-col>
 </el-row>
 ```
 :::

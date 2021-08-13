@@ -36,7 +36,6 @@
 
     .side-nav {
       height: 100%;
-      padding-top: 50px;
       padding-bottom: 50px;
       padding-right: 0;
 
@@ -52,11 +51,16 @@
     }
 
     .content {
-      padding-top: 50px;
+      background-color: #f8f9fb;
+      min-height: 460px;
+      padding: 40px 40px 100px;
+      display: block;
+      border-radius: 16px;
+      box-shadow: inset 4px 4px 25px 5px rgb(36 20 119 / 10%);
 
       > {
         h3 {
-          margin: 55px 0 20px;
+          margin: 40px 0 20px;
         }
 
         table {
@@ -137,7 +141,6 @@
     </el-scrollbar>
     <div class="page-component__content">
       <router-view class="content"></router-view>
-      <footer-nav></footer-nav>
     </div>
     <el-backtop
       v-if="showBackToTop"
