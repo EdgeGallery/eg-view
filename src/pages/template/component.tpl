@@ -60,7 +60,7 @@
 
       > {
         h3 {
-          margin: 40px 0 20px;
+          margin: 40px 0 30px;
         }
 
         table {
