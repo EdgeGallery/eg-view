@@ -99,8 +99,7 @@
         }
 
       .nav-item-second {
-        // position:relative;
-        // left: -60px;
+
         a {
           display: block;
           height: 30px;
@@ -111,16 +110,24 @@
           white-space: nowrap;
           text-overflow: ellipsis;
           font-weight: normal;
-          // width: 80%;
+          padding-left: 60px;
+          width: calc(100% - 75px);
 
           &:hover,
           &.active {
             color: #5e40c8;
             background-image: linear-gradient(to right,#e6e7f3,#f0f0f7);
-            // border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0;
           }
         }
-      }s
+
+        &:last-child{
+          padding-bottom: 10px;
+        }
+      }
+      .sub-nav{
+        margin-left: -60px;
+      }
 
       &.sponsors {
         & > .sub-nav {

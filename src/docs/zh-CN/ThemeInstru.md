@@ -25,7 +25,7 @@ import './assets/style/element-variables.scss'
       <el-button
         class="newproject_btn linearGradientActive"
         >
-          主要按钮
+          点击效果
       </el-button>
   </el-col>
 </el-row>
