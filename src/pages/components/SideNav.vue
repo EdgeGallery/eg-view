@@ -193,6 +193,7 @@
         :key="index"
         @mouseenter="hoverList(index)"
         @mouseleave="activeInfo=-1"
+        @click="selectList(index)"
         :class="{'navselectimg': activeInfo===index ||selectInfo === index,'select':selectInfo===index}"
         >
         <a v-if="!item.path && !item.href" @click="expandMenu" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
@@ -220,28 +221,6 @@
             </router-link>
           </li>
         </ul>
-        <!-- <template v-if="item.groups">
-          <div
-            class="nav-group"
-            v-for="(group, key) in item.groups"
-            :key="key"
-            >
-            <div class="nav-group__title" @click="expandMenu">{{group.groupName}}</div>
-            <ul class="pure-menu-list">
-              <li
-                class="nav-item"
-                v-for="(navItem, key) in group.list"
-                v-show="!navItem.disabled"
-                :key="key">
-                <router-link
-                  active-class="active"
-                  :to="base + navItem.path"
-                  exact
-                  v-text="navItem.title"></router-link>
-              </li>
-            </ul>
-          </div>
-        </template> -->
       </li>
     </ul>
   </div>

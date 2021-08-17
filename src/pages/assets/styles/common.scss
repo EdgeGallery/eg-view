@@ -1,8 +1,16 @@
+@font-face {  
+  font-family: 'Harmony-Regular';
+  src: url('../fonts/Harmony-Regular.ttf');
+}
+@font-face {
+  font-family: 'Harmony-SemiBold';
+  src: url(../fonts/Harmony-SemiBold.ttf);
+}
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  font-family: 'Harmony-Regular',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -61,7 +69,7 @@ button, input, select, textarea {
 
 .hljs {
   line-height: 2.2;
-  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-family: 'Harmony-Regular', Monaco, Consolas, Courier, monospace;
   font-size: 14px;
   color: #8f859b;
   background-color: #ececf5;
@@ -113,6 +121,9 @@ button, input, select, textarea {
     background: #ccc5d9;
     position: relative;
     border-radius: 50%;
+  }
+  h2,h3{
+    font-family: 'Harmony-SemiBold';
   }
   h2, h3, h4, h5 {
 

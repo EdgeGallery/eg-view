@@ -38,7 +38,7 @@
     }
 
     code {
-      font-family: Menlo, Monaco, Consolas, Courier, monospace;
+      font-family: 'Harmony-Regular', Monaco, Consolas, Courier, monospace;
     }
 
     .demo-button {
@@ -50,7 +50,7 @@
     }
 
     .meta {
-      background-color: #fafafa;
+      background-color: #ececf5;
       border-top: solid 1px #eaeefb;
       overflow: hidden;
       height: 0;
