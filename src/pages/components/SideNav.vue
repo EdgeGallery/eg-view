@@ -193,12 +193,12 @@
         :key="index"
         @mouseenter="hoverList(index)"
         @mouseleave="activeInfo=-1"
-        @click="selectList(index)"
         :class="{'navselectimg': activeInfo===index ||selectInfo === index,'select':selectInfo===index}"
         >
-        <a v-if="!item.path && !item.href" @click="expandMenu" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
-        <a v-if="item.href" :href="item.href" target="_blank" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
+        <a  v-if="!item.path && !item.href" @click="expandMenu" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
+        <a  v-if="item.href" :href="item.href" target="_blank" :class="{'selectTitle':selectInfo===index}">{{item.name}}</a>
         <router-link
+          @click.native="selectList(index)"
           v-if="item.path"
           active-class="active"
           :to="base + item.path"
