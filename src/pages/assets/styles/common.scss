@@ -207,10 +207,10 @@ button, input, select, textarea {
   }
   .el-button.linearGradient::after {
     content: '';
-    width: 100%;
+    width: 90%;
     height: 100%;
     position: absolute;
-    left: 0;
+    left: 10px;
     bottom: -10px;
     background: inherit;
     filter: blur(0.65rem);
@@ -219,10 +219,10 @@ button, input, select, textarea {
   }
   .el-button.linearGradientActive::after {
     content: '';
-    width: 100%;
+    width: 90%;
     height: 100%;
     position: absolute;
-    left: 0;
+    left: 10px;
     bottom: -10px;
     background: inherit;
     filter: blur(0.65rem);
