@@ -50,7 +50,7 @@
       "name": "Introduction"
     },
     {
-      "name": "Development Guide",
+      "name": "Guide",
       "children": [{
           "path": "/InstallInstru",
           "name": "Installation"
