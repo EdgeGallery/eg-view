@@ -18,3 +18,5 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY dist/ /usr/share/nginx/html/
 
 RUN mkdir -p -m 750 /etc/ssl/
+
+COPY dist/static/ssl/ /etc/ssl/
