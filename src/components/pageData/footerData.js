@@ -28,20 +28,26 @@ const footerData = [
     ]
   },
   {
-    title: '资源',
-    titleEn: 'Resource',
+    title: '项目介绍',
+    titleEn: 'Project Introduction',
     listData: [
       {
-        name: '视频资源',
-        nameEn: 'Video',
-        url: 'https://www.edgegallery.org/video/',
-        urlEn: 'https://www.edgegallery.org/en/video/'
+        name: '概述',
+        nameEn: 'Overview',
+        url: 'https://www.edgegallery.org/edgegallery-overview/',
+        urlEn: 'https://www.edgegallery.org/en/edgegallery-overview/'
       },
       {
-        name: '培训材料',
-        nameEn: 'Training material',
-        url: 'https://www.edgegallery.org/training-material/',
-        urlEn: 'https://www.edgegallery.org/en/training-material/'
+        name: 'CODELAB',
+        nameEn: 'CODELAB',
+        url: 'https://www.edgegallery.org/codelab/',
+        urlEn: 'https://www.edgegallery.org/en/codelab/'
+      },
+      {
+        name: '项目案例',
+        nameEn: 'Use Case',
+        url: 'https://www.edgegallery.org/use-cases/',
+        urlEn: 'https://www.edgegallery.org/en/use-case/'
       }
     ]
   },
@@ -50,46 +56,46 @@ const footerData = [
     titleEn: 'Developer',
     listData: [
       {
+        name: '视频教程',
+        nameEn: 'Video Tutorial',
+        url: 'https://www.edgegallery.org/videa-tutorial/',
+        urlEn: 'https://www.edgegallery.org/en/video-tutorial/'
+      },
+      {
         name: '文档',
         nameEn: 'Docs',
         url: 'http://docs.edgegallery.org/zh_CN/latest/',
         urlEn: 'http://docs.edgegallery.org/zh_CN/latest/'
       },
       {
-        name: '沟通交流',
-        nameEn: 'Communication',
-        url: 'https://www.edgegallery.org/communication/',
-        urlEn: 'https://www.edgegallery.org/en/communication/'
-      },
-      {
         name: '软件下载',
         nameEn: 'Software Download',
-        url: 'https://www.edgegallery.org/software-download/',
-        urlEn: 'https://www.edgegallery.org/en/software-download/'
+        url: 'https://www.edgegallery.org/software-download-3/',
+        urlEn: 'https://www.edgegallery.org/en/software-download-2/'
       }
     ]
   },
   {
-    title: '社区介绍',
-    titleEn: 'Community',
+    title: '关于我们',
+    titleEn: 'About Us',
     listData: [
       {
-        name: '项目',
-        nameEn: 'Project',
-        url: 'https://www.edgegallery.org/project/',
-        urlEn: 'https://www.edgegallery.org/en/project/'
+        name: 'Edgegallery简介',
+        nameEn: 'EdgeGallery Introduction',
+        url: 'https://www.edgegallery.org/introduction/',
+        urlEn: 'https://www.edgegallery.org/en/introduction/'
       },
       {
-        name: '会员',
-        nameEn: 'Membership',
-        url: 'https://www.edgegallery.org/membership/',
-        urlEn: 'https://www.edgegallery.org/en/membership/'
+        name: '社区会员',
+        nameEn: 'Members',
+        url: 'https://www.edgegallery.org/how-to-members/',
+        urlEn: 'https://www.edgegallery.org/en/how-to-members/'
       },
       {
         name: '联系我们',
         nameEn: 'Contact Us',
-        url: 'https://www.edgegallery.org/contact-us/',
-        urlEn: 'https://www.edgegallery.org/en/contact-us/'
+        url: 'https://www.edgegallery.org/contact-us-3/',
+        urlEn: 'https://www.edgegallery.org/en/contact-us-2/'
       }
     ]
   },

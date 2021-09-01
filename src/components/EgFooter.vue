@@ -92,11 +92,17 @@
                   @mouseenter="showGitee=true"
                   @mouseleave="showGitee=false"
                 >
-                  <img
-                    src="../assets/images/footer_gitee.png"
-                    alt=""
-                    class="imgIcon"
+                  <el-link
+                    :href="giteeUrl"
+                    target="_blank"
+                    :underline="false"
                   >
+                    <img
+                      src="../assets/images/footer_gitee.png"
+                      alt=""
+                      class="imgIcon"
+                    >
+                  </el-link>
                 </div>
                 <el-collapse-transition>
                   <div
@@ -120,11 +126,17 @@
                   @mouseenter="showWeibo=true"
                   @mouseleave="showWeibo=false"
                 >
-                  <img
-                    src="../assets/images/footer_weibo.png"
-                    alt=""
-                    class="imgIcon"
+                  <el-link
+                    :href="weiboUrl"
+                    target="_blank"
+                    :underline="false"
                   >
+                    <img
+                      src="../assets/images/footer_weibo.png"
+                      alt=""
+                      class="imgIcon"
+                    >
+                  </el-link>
                 </div>
                 <el-collapse-transition>
                   <div
@@ -148,11 +160,17 @@
                   @mouseenter="showEmail=true"
                   @mouseleave="showEmail=false"
                 >
-                  <img
-                    src="../assets/images/footer_email.png"
-                    alt=""
-                    class="imgIcon"
+                  <el-link
+                    :href="emailUrl"
+                    target="_blank"
+                    :underline="false"
                   >
+                    <img
+                      src="../assets/images/footer_email.png"
+                      alt=""
+                      class="imgIcon"
+                    >
+                  </el-link>
                 </div>
                 <el-collapse-transition>
                   <div
@@ -330,6 +348,7 @@ export default {
         .imgIcon{
           transition: all 0.5s;
           cursor: pointer;
+          display: block;
         }
         .imgIcon:hover{
           transform:rotate(360deg);
