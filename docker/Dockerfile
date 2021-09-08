@@ -16,6 +16,5 @@ FROM swr.ap-southeast-1.myhuaweicloud.com/eg-common/nginx:stable
 
 RUN mkdir -p -m 750 /etc/ssl/
 
-COPY dist/static/ssl/ /etc/ssl/
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY dist/ /usr/share/nginx/html/
