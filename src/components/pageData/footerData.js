@@ -88,8 +88,8 @@ const footerData = [
       {
         name: '社区会员',
         nameEn: 'Members',
-        url: 'https://www.edgegallery.org/how-to-members/',
-        urlEn: 'https://www.edgegallery.org/en/how-to-members/'
+        url: 'https://www.edgegallery.org/members-4/',
+        urlEn: 'https://www.edgegallery.org/en/members/'
       },
       {
         name: '联系我们',
@@ -123,11 +123,11 @@ const copyrightData = {
   copyRightEn: 'Copyright © EdgeGallery 2019 - 2021. All rights reserved. For details, see the Legal Statement',
   legalNotice: '法律声明',
   legalNoticeEn: 'Legal Notice',
-  legalNoticeUrl: 'https://www.edgegallery.org/%e6%b3%95%e5%be%8b%e5%a3%b0%e6%98%8e/',
+  legalNoticeUrl: 'https://www.edgegallery.org/legal-notice/',
   legalNoticeUrlEn: 'https://www.edgegallery.org/en/legal-notice/',
   privacyPolicy: '政策隐私',
   privacyPolicyEn: 'Privacy Policy',
-  privacyPolicyUrl: 'https://www.edgegallery.org/%e9%9a%90%e7%a7%81%e6%94%bf%e7%ad%96/',
+  privacyPolicyUrl: 'https://www.edgegallery.org/privacy-policy/',
   privacyPolicyUrlEn: 'https://www.edgegallery.org/en/privacy-policy/'
 }
 export default {
