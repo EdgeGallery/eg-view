@@ -29,7 +29,10 @@
       >
     </div>
     <div class="nav big lt">
-      <slot name="Topbar" />
+      <Topbar
+        slot="Topbar"
+        :json-data="jsonData"
+      />
     </div>
     <div class="user_right rt">
       <div class="language rt">
@@ -92,15 +95,24 @@
         v-show="menu_small"
         id="menu-div"
       >
-        <slot name="TopbarSmall" />
+        <TopbarSmall
+          slot="Topbar"
+          :json-data="jsonData"
+        />
       </div>
     </el-collapse-transition>
   </div>
 </template>
 
 <script>
+import Topbar from './Topbar.vue'
+import TopbarSmall from './TopbarSmall.vue'
 export default {
   name: 'Navgation',
+  components: {
+    Topbar,
+    TopbarSmall
+  },
   props: {
     scrollTopProp: {
       type: Number,
@@ -117,6 +129,10 @@ export default {
     userCenterPageProp: {
       type: String,
       default: ''
+    },
+    jsonDataProp: {
+      type: Array,
+      default: () => []
     }
   },
   data () {
@@ -134,7 +150,8 @@ export default {
       isScroll: false,
       navLogIn: '登录',
       userAccountCenter: '我的账号',
-      navLogOut: '注销'
+      navLogOut: '注销',
+      jsonData: this.jsonDataProp
     }
   },
   watch: {
