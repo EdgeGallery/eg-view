@@ -39,6 +39,7 @@
                 <el-link
                   :href="language==='cn'?itemSub.url:itemSub.urlEn"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {{ language==='cn'?itemSub.name:itemSub.nameEn }}
                 </el-link>
@@ -95,6 +96,7 @@
                   <el-link
                     :href="giteeUrl"
                     target="_blank"
+                    rel="noopener noreferrer"
                     :underline="false"
                   >
                     <img
@@ -114,6 +116,7 @@
                     <el-link
                       :href="giteeUrl"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {{ language==='cn'?publicList.codeWarehouse:publicList.codeWarehouseEn }}
                     </el-link>
@@ -129,6 +132,7 @@
                   <el-link
                     :href="weiboUrl"
                     target="_blank"
+                    rel="noopener noreferrer"
                     :underline="false"
                   >
                     <img
@@ -148,6 +152,7 @@
                     <el-link
                       :href="weiboUrl"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {{ language==='cn'?publicList.followWeibo:publicList.followWeiboEn }}
                     </el-link>
@@ -163,6 +168,7 @@
                   <el-link
                     :href="emailUrl"
                     target="_blank"
+                    rel="noopener noreferrer"
                     :underline="false"
                   >
                     <img
@@ -182,6 +188,7 @@
                     <el-link
                       :href="emailUrl"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {{ language==='cn'?publicList.mailingList:publicList.mailingListEn }}
                     </el-link>
@@ -201,6 +208,7 @@
         <el-link
           :href="language==='cn'?copyrightlist.legalNoticeUrl:copyrightlist.legalNoticeUrlEn"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {{ language==='cn'?copyrightlist.legalNotice:copyrightlist.legalNoticeEn }}
         </el-link>
@@ -208,6 +216,7 @@
         <el-link
           :href="language==='cn'?copyrightlist.privacyPolicyUrl:copyrightlist.privacyPolicyUrlEn"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {{ language==='cn'?copyrightlist.privacyPolicy:copyrightlist.privacyPolicyEn }}
         </el-link>
