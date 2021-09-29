@@ -63,9 +63,9 @@ const footerData = [
       },
       {
         name: '文档',
-        nameEn: 'Docs',
-        url: 'http://docs.edgegallery.org/zh_CN/latest/',
-        urlEn: 'http://docs.edgegallery.org/zh_CN/latest/'
+        nameEn: 'Document',
+        url: 'https://www.edgegallery.org/documentation/',
+        urlEn: 'https://www.edgegallery.org/en/document/'
       },
       {
         name: '软件下载',
