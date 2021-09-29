@@ -175,6 +175,9 @@ export default {
     },
     userCenterPageProp (val) {
       this.userCenterPage = val
+    },
+    jsonDataProp (val) {
+      this.jsonData = val
     }
   },
   mounted () {
