@@ -69,17 +69,7 @@ export default {
     currentChange (val) {
       this.$emit('currentChange', val)
     }
-  },
-  created () {
-  },
-  mounted () {
-  },
-  beforeCreate () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  activated () {}
+  }
 }
 </script>
 <style lang='less' scoped>
