@@ -34,11 +34,11 @@ const loadDocs = function (lang, path) {
   return LOAD_DOCS_MAP[lang](path)
 }
 
-const registerRoute = (navConfig) => {
-  let route = []
-  Object.keys(navConfig).forEach((lang, index) => {
-    let navs = navConfig[lang]
-    route.push({
+const registerRoute = (navData) => {
+  let navRoute = []
+  Object.keys(navData).forEach((lang, index) => {
+    let navs = navData[lang]
+    navRoute.push({
       path: `/${lang}/component`,
       redirect: `/${lang}/component/OverviewInstru`,
       component: load(lang, 'component'),
@@ -47,13 +47,13 @@ const registerRoute = (navConfig) => {
     navs.forEach(nav => {
       if (nav.groups) {
         nav.groups.forEach(group => {
-          group.list.forEach(nav => {
-            addRoute(nav, lang, index)
+          group.list.forEach(navInGroup => {
+            addRoute(navInGroup, lang, index)
           })
         })
       } else if (nav.children) {
-        nav.children.forEach(nav => {
-          addRoute(nav, lang, index)
+        nav.children.forEach(navChild => {
+          addRoute(navChild, lang, index)
         })
       } else {
         addRoute(nav, lang, index)
@@ -73,10 +73,10 @@ const registerRoute = (navConfig) => {
       component: component.default || component
     }
 
-    route[index].children.push(child)
+    navRoute[index].children.push(child)
   }
 
-  return route
+  return navRoute
 }
 
 let route = registerRoute(navConfig)

@@ -47,13 +47,11 @@ li{
 }
 .el-breadcrumb__separator{
   color: #707070 !important;
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
 }
 .el-breadcrumb__inner a,  .el-breadcrumb__inner.is-link:hover{
   color: #2E94FF !important;
-}
-.el-breadcrumb__separator{
-  margin-left: 0.25rem !important;
-  margin-right: 0.25rem !important;
 }
 .el-breadcrumb{
   height: 3rem;
