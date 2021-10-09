@@ -1,3 +1,3 @@
-# eg-view简介
-eg-view服务于EdgeGallery，主要用于规范化EdgeGallery界面风格。eg-view基于Element UI提供了一套适用于EdgeGallery平台的组件。
+# 界面组件简介
+在界面呈现方面，edgeGallery基于ElementUI提供了一批风格优美、交互友好、且易用性和可扩展性良好的界面组件，在后续版本中会持续维护、发布更多的组件，敬请期待！这些组件是完全公开的，欢迎使用。
 
