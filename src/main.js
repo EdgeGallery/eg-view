@@ -22,7 +22,6 @@ import ElementUI from 'element-ui'
 import hljs from 'highlight.js'
 import DemoBlock from './pages/components/DemoBlock'
 import SideNav from './pages/components/SideNav'
-import FooterNav from './pages/components/FooterNav'
 import 'highlight.js/styles/color-brewer.css'
 
 import './pages/demo-styles/index.scss'
@@ -35,7 +34,6 @@ Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.component('demo-block', DemoBlock)
 Vue.component('side-nav', SideNav)
-Vue.component('footer-nav', FooterNav)
 
 const router = new VueRouter({
   mode: 'hash',
