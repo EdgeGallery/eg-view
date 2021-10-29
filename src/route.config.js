@@ -37,6 +37,12 @@ const loadDocs = function (lang, path) {
 const registerRoute = (navData) => {
   let navRoute = []
   Object.keys(navData).forEach((lang, index) => {
+    navRoute.push({
+      component: load(lang, 'component'),
+      path: `/${lang}/component`,
+      redirect: `/${lang}/component/OverviewInstru`,
+      children: []
+    })
     let navs = navData[lang]
     navs.forEach(nav => {
       if (nav.children) {
@@ -52,12 +58,6 @@ const registerRoute = (navData) => {
       } else {
         addRoute(nav, lang, index)
       }
-    })
-    navRoute.push({
-      component: load(lang, 'component'),
-      path: `/${lang}/component`,
-      redirect: `/${lang}/component/OverviewInstru`,
-      children: []
     })
   })
   function addRoute (page, lang, index) {
