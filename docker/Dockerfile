@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM swr.cn-north-4.myhuaweicloud.com/eg-common/nginx:stable
+FROM swr.cn-north-4.myhuaweicloud.com/eg-common/nginx:stable-alpine
 
 RUN mkdir -p -m 750 /etc/ssl/
 
