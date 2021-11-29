@@ -35,19 +35,19 @@ const footerData = [
         name: '概述',
         nameEn: 'Overview',
         url: 'https://www.edgegallery.org/edgegallery-overview/',
-        urlEn: 'https://www.edgegallery.org/en/edgegallery-overview/'
+        urlEn: 'https://www.edgegallery.org/en/pc-edgegallery-overview/'
       },
       {
         name: 'CODELAB',
         nameEn: 'CODELAB',
         url: 'https://www.edgegallery.org/codelab/',
-        urlEn: 'https://www.edgegallery.org/en/codelab/'
+        urlEn: 'https://www.edgegallery.org/en/pc-codelab/'
       },
       {
         name: '项目案例',
         nameEn: 'Use Case',
         url: 'https://www.edgegallery.org/use-cases/',
-        urlEn: 'https://www.edgegallery.org/en/use-case/'
+        urlEn: 'https://www.edgegallery.org/en/pc-use-case/'
       }
     ]
   },
@@ -58,20 +58,20 @@ const footerData = [
       {
         name: '视频教程',
         nameEn: 'Video Tutorial',
-        url: 'https://www.edgegallery.org/videa-tutorial/',
+        url: 'https://www.edgegallery.org/pc-videa-tutorial/',
         urlEn: 'https://www.edgegallery.org/en/video-tutorial/'
       },
       {
         name: '文档',
         nameEn: 'Document',
-        url: 'https://www.edgegallery.org/documentation/',
-        urlEn: 'https://www.edgegallery.org/en/document/'
+        url: 'https://www.edgegallery.org/pc-documentation/',
+        urlEn: 'https://www.edgegallery.org/en/pc-documentation/'
       },
       {
         name: '软件下载',
         nameEn: 'Software Download',
-        url: 'https://www.edgegallery.org/software-download-3/',
-        urlEn: 'https://www.edgegallery.org/en/software-download-2/'
+        url: 'https://www.edgegallery.org/pc-software-download-4/',
+        urlEn: 'https://www.edgegallery.org/en/pc-software-download-2/'
       }
     ]
   },
@@ -82,20 +82,20 @@ const footerData = [
       {
         name: 'Edgegallery简介',
         nameEn: 'EdgeGallery Introduction',
-        url: 'https://www.edgegallery.org/introduction/',
+        url: 'https://www.edgegallery.org/pc-introduction/',
         urlEn: 'https://www.edgegallery.org/en/introduction/'
       },
       {
         name: '社区会员',
         nameEn: 'Members',
-        url: 'https://www.edgegallery.org/members-4/',
+        url: 'https://www.edgegallery.org/pc-members/',
         urlEn: 'https://www.edgegallery.org/en/members/'
       },
       {
         name: '联系我们',
         nameEn: 'Contact Us',
-        url: 'https://www.edgegallery.org/contact-us-3/',
-        urlEn: 'https://www.edgegallery.org/en/contact-us-2/'
+        url: 'https://www.edgegallery.org/pc-contact-us/',
+        urlEn: 'https://www.edgegallery.org/en/pc-contact-us-2/'
       }
     ]
   },
