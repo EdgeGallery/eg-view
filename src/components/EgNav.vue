@@ -180,6 +180,11 @@ export default {
       this.jsonData = val
     }
   },
+  beforeMount () {
+    let language = localStorage.getItem('language') || 'cn'
+    this.language = language === 'en' ? 'En' : 'Cn'
+    this.changeLange(this.language)
+  },
   mounted () {
     let lanIndex = window.location.href.search('language')
     if (lanIndex > 0) {
