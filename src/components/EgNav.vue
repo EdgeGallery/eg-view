@@ -137,7 +137,7 @@ export default {
   },
   data () {
     return {
-      language: 'En',
+      language: '',
       languageIcon: require('../assets/images/nav_en.png'),
       userCenterPage: '',
       menu_small: false,
@@ -180,11 +180,6 @@ export default {
       this.jsonData = val
     }
   },
-  beforeMount () {
-    let language = localStorage.getItem('language') || 'cn'
-    this.language = language === 'en' ? 'En' : 'Cn'
-    this.changeLange(this.language)
-  },
   mounted () {
     let lanIndex = window.location.href.search('language')
     if (lanIndex > 0) {
@@ -193,6 +188,9 @@ export default {
         this.changeLange(this.language)
       }
     }
+    let _lang = localStorage.getItem('language')
+    this.languageIcon = _lang === 'cn' ? require('../assets/images/nav_en.png') : require('../assets/images/nav_cn.png')
+    this.language = _lang === 'cn' ? 'En' : 'Cn'
     // When window size changes, adjust the value of screenHeight
     window.onresize = () => {
       return (() => {
@@ -229,20 +227,20 @@ export default {
       }
     },
     changeLange (lang) {
-      this.$emit('changeLange', lang)
-      if (lang === 'cn' || this.language === 'Cn') {
+      if (this.language === 'Cn') {
         this.language = 'En'
         this.navLogIn = '登录'
         this.userAccountCenter = '我的帐号'
         this.navLogOut = '注销'
         this.languageIcon = require('../assets/images/nav_en.png')
-      } else if (lang === 'en' || this.language === 'En') {
+      } else if (this.language === 'En') {
         this.language = 'Cn'
         this.languageIcon = require('../assets/images/nav_cn.png')
         this.navLogIn = 'Log In'
         this.userAccountCenter = 'My Account'
         this.navLogOut = 'Logout'
       }
+      this.$emit('changeLange', lang)
     },
     clickLogo () {
       this.$emit('clickLogo')
