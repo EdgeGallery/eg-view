@@ -292,6 +292,9 @@ export default {
     this.copyrightlist = pageData.copyrightData
     // Put the list of received platform names into the total bottom data
     this.footerData[0].listData = pageData.footerData[0].listData
+    let _temp = this.footerData[0].listData[0]
+    this.footerData[0].listData = []
+    this.footerData[0].listData.push(_temp)
     this.footerData.forEach(item => {
       if (item.titleEn === 'About EdgeGallery') {
         this.platformData.forEach(itemSub => {
