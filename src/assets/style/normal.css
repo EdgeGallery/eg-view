@@ -15,12 +15,17 @@
  */
  
  html,body,div,p,h1,h2,h3,h4,h5,h6,ul,li,button,span,a{
-  margin:0;
   padding:0;
   box-sizing: border-box;
 }
 li{
   list-style: none;
+}
+.lt{
+  float: left;
+}
+.rt{
+  float:right;
 }
 .clear:after{
   content: '';
