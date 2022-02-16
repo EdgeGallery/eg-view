@@ -250,6 +250,14 @@ export default {
     specificBgColor: {
       type: String,
       default: '#ffffff'
+    },
+    footerBgcolorProp: {
+      type: String,
+      default: '#3e279b'
+    },
+    footerPaddingtopProp: {
+      type: Number,
+      default: 100
     }
   },
   data () {
@@ -272,11 +280,26 @@ export default {
       this.language = localStorage.getItem('language')
     },
     specificBg (newVal) {
-      this.setFooterBg(newVal)
+      this.setSpecificBg(newVal)
+    },
+    showFullFooterPage () {
+      this.setFooterListstyle()
     }
   },
   methods: {
-    setFooterBg (specificBg) {
+    setFooterListstyle () {
+      this.$nextTick(() => {
+        let _oDiv = document.getElementsByClassName('footer_list')[0]
+        if (_oDiv) {
+          _oDiv.style.background = this.footerBgcolorProp
+        }
+        let _oDivFooter = document.getElementsByClassName('footerBar')[0]
+        if (_oDivFooter) {
+          _oDivFooter.style.paddingTop = this.footerPaddingtopProp + 'px'
+        }
+      })
+    },
+    setSpecificBg (specificBg) {
       let oDiv = document.getElementsByClassName('specific_Bg')
       if (specificBg && oDiv[0]) {
         oDiv[0].style.background = this.specificBgColor
@@ -286,17 +309,15 @@ export default {
     }
   },
   mounted () {
-    this.setFooterBg(this.specificBg)
+    this.setSpecificBg(this.specificBg)
+    this.setFooterListstyle()
     this.footerData = pageData.footerData
     this.publicList = pageData.publicData
     this.copyrightlist = pageData.copyrightData
     // Put the list of received platform names into the total bottom data
-    this.footerData[0].listData = pageData.footerData[0].listData
-    let _temp = this.footerData[0].listData[0]
     this.footerData[0].listData = []
-    this.footerData[0].listData.push(_temp)
     this.footerData.forEach(item => {
-      if (item.titleEn === 'About EdgeGallery') {
+      if (item.titleEn === 'Related Platforms') {
         this.platformData.forEach(itemSub => {
           let obj = {
             name: '',
@@ -304,7 +325,12 @@ export default {
             url: '',
             urlEn: ''
           }
-          obj.name = obj.nameEn = itemSub.name
+          if (itemSub.nameEn) {
+            obj.name = itemSub.name
+            obj.nameEn = itemSub.nameEn
+          } else {
+            obj.name = obj.nameEn = itemSub.name
+          }
           obj.url = obj.urlEn = itemSub.url
           item.listData.push(obj)
         })
@@ -318,9 +344,7 @@ export default {
 .footerBar{
   width: 100%;
   z-index: 99;
-  padding-top: 100px;
   .footer_list{
-    background: #380879;
     padding: 50px 0;
     color: #fff;
     ul{

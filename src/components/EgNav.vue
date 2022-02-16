@@ -32,6 +32,7 @@
       <Topbar
         slot="Topbar"
         :json-data="jsonData"
+        :navBgcolor="navBgcolorProp"
       />
     </div>
     <div class="user_right rt">
@@ -114,6 +115,10 @@ export default {
     TopbarSmall
   },
   props: {
+    navBgcolorProp: {
+      type: String,
+      default: '#3E279B'
+    },
     scrollTopProp: {
       type: Number,
       default: 0
@@ -181,6 +186,7 @@ export default {
     }
   },
   mounted () {
+    this.setNavBgcolor()
     let lanIndex = window.location.href.search('language')
     if (lanIndex > 0) {
       let lan = window.location.href.substring(lanIndex + 9, lanIndex + 11)
@@ -200,6 +206,12 @@ export default {
     }
   },
   methods: {
+    setNavBgcolor () {
+      this.$nextTick(() => {
+        let _oDiv = document.getElementsByClassName('navgation')[0]
+        _oDiv.style.background = this.navBgcolorProp
+      })
+    },
     getPageScroll (scrollTop) {
       if (scrollTop < 0) {
         this.isScroll = true
@@ -257,7 +269,6 @@ export default {
 
 <style lang='less'>
 .navgation {
-  background: #5e40c8;
   height: 80px;
   top: 0px;
   width: 100%;

@@ -22,7 +22,7 @@
       router
       @select="handleSelect"
       text-color="#bdb1e4"
-      background-color="#5e40c8"
+      :background-color="navBgcolor"
       active-text-color="#fff"
       mode="horizontal"
     >
@@ -100,14 +100,15 @@ export default {
     jsonData: {
       type: Array,
       default: () => []
+    },
+    navBgcolor: {
+      type: String,
+      default: '#3E279B'
     }
   },
   data () {
     return {
-      inputVal: '',
-      indexName: '/',
-      fromPath: '',
-      routerPath: sessionStorage.getItem('routerPath')
+      indexName: '/'
     }
   },
   methods: {
@@ -117,8 +118,10 @@ export default {
       }
     }
   },
-  mounted () {
-    this.indexName = this.$route.fullPath
+  watch: {
+    $route (to, from) {
+      this.handleSelect(to.path)
+    }
   }
 }
 

@@ -23,7 +23,7 @@ import hljs from 'highlight.js'
 import DemoBlock from './pages/components/DemoBlock'
 import SideNav from './pages/components/SideNav'
 import 'highlight.js/styles/color-brewer.css'
-
+import './assets/style/normal.css'
 import './pages/demo-styles/index.scss'
 import './pages/assets/styles/common.scss'
 

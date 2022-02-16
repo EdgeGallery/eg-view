@@ -16,16 +16,9 @@
 
 const footerData = [
   {
-    title: '关于Edgegallery',
-    titleEn: 'About EdgeGallery',
-    listData: [
-      {
-        name: 'EdgeGallery官网',
-        nameEn: 'EdgeGallery Official website',
-        url: 'https://www.edgegallery.org/',
-        urlEn: 'https://www.edgegallery.org/en/'
-      }
-    ]
+    title: '相关平台',
+    titleEn: 'Related Platforms',
+    listData: []
   },
   {
     title: '项目介绍',
@@ -34,19 +27,19 @@ const footerData = [
       {
         name: '概述',
         nameEn: 'Overview',
-        url: 'https://www.edgegallery.org/edgegallery-overview/',
+        url: 'https://www.edgegallery.org/pc-edgegallery-overview/',
         urlEn: 'https://www.edgegallery.org/en/pc-edgegallery-overview/'
       },
       {
         name: 'CODELAB',
         nameEn: 'CODELAB',
-        url: 'https://www.edgegallery.org/codelab/',
+        url: 'https://www.edgegallery.org/pc-codelab/',
         urlEn: 'https://www.edgegallery.org/en/pc-codelab/'
       },
       {
         name: '项目案例',
         nameEn: 'Use Case',
-        url: 'https://www.edgegallery.org/use-cases/',
+        url: 'https://www.edgegallery.org/pc-use-cases/',
         urlEn: 'https://www.edgegallery.org/en/pc-use-case/'
       }
     ]
@@ -59,7 +52,7 @@ const footerData = [
         name: '视频教程',
         nameEn: 'Video Tutorial',
         url: 'https://www.edgegallery.org/pc-videa-tutorial/',
-        urlEn: 'https://www.edgegallery.org/en/video-tutorial/'
+        urlEn: 'https://www.edgegallery.org/en/pc-video-tutorial/'
       },
       {
         name: '文档',
@@ -70,32 +63,32 @@ const footerData = [
       {
         name: '软件下载',
         nameEn: 'Software Download',
-        url: 'https://www.edgegallery.org/pc-software-download-4/',
-        urlEn: 'https://www.edgegallery.org/en/pc-software-download-2/'
+        url: 'https://www.edgegallery.org/pc-software-download/',
+        urlEn: 'https://www.edgegallery.org/en/pc-software-download-2-6/'
       }
     ]
   },
   {
-    title: '关于我们',
-    titleEn: 'About Us',
+    title: '社区介绍',
+    titleEn: 'Community Introduction',
     listData: [
       {
-        name: 'Edgegallery简介',
-        nameEn: 'EdgeGallery Introduction',
-        url: 'https://www.edgegallery.org/pc-introduction/',
-        urlEn: 'https://www.edgegallery.org/en/introduction/'
+        name: 'EdgeGallery官网',
+        nameEn: 'EdgeGallery Official website',
+        url: 'https://www.edgegallery.org/',
+        urlEn: 'https://www.edgegallery.org/en/'
       },
       {
         name: '社区会员',
         nameEn: 'Members',
         url: 'https://www.edgegallery.org/pc-members/',
-        urlEn: 'https://www.edgegallery.org/en/members/'
+        urlEn: 'https://www.edgegallery.org/en/pc-members/'
       },
       {
-        name: '联系我们',
-        nameEn: 'Contact Us',
-        url: 'https://www.edgegallery.org/pc-contact-us/',
-        urlEn: 'https://www.edgegallery.org/en/pc-contact-us-2/'
+        name: '参与贡献',
+        nameEn: 'Participate in Contribute',
+        url: 'https://www.edgegallery.org/pc-community-contribution-2/',
+        urlEn: 'https://www.edgegallery.org/en/pc-engage-in-community-contributions/'
       }
     ]
   },
@@ -119,8 +112,8 @@ const publicData = {
   emailUrl: 'https://edgegallery.groups.io/g/main'
 }
 const copyrightData = {
-  copyRight: '版权所有 © EdgeGallery 2019 - 2021 保留一切权利 请参见法律声明',
-  copyRightEn: 'Copyright © EdgeGallery 2019 - 2021. All rights reserved. For details, see the Legal Statement',
+  copyRight: '版权所有 © EdgeGallery 2019 - 2022 保留一切权利 请参见法律声明',
+  copyRightEn: 'Copyright © EdgeGallery 2019 - 2022. All rights reserved. For details, see the Legal Statement',
   legalNotice: '法律声明',
   legalNoticeEn: 'Legal Notice',
   legalNoticeUrl: 'https://www.edgegallery.org/legal-notice/',
