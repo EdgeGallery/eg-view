@@ -299,7 +299,7 @@ export default {
     display: flex;
 
     img {
-      height: 29px;
+      height: 36px;
       cursor: pointer;
       margin-top: 25px;
     }
