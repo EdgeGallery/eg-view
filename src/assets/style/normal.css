@@ -87,21 +87,12 @@ li{
    border-bottom:2px solid #43F6AD;
    transform: scale(1);
  }
- .el-menu-item{
-   font-size: 16px;
- }
  .el-menu--horizontal>.el-submenu .el-submenu__icon-arrow{
   margin-top:3px;
 }
 .el-submenu__icon-arrow{
   margin-top:-3px;
 }
-  .first-menu{
-    font-size: 25px!important;
-  }
-  .second-menu{
-    font-size: 18px!important;
-  }
 
 /* 面包屑归一化 */
 .el-breadcrumb__item {
