@@ -37,7 +37,7 @@
           :key="item.id"
         >
           <template slot="title">
-            <em :class="item.icon" /><span class="first-menu">{{ item.name }}</span>
+            <em :class="item.icon" /><span class="first-menu" :style="{fontSize:navMenuFontsize+'px'}">{{ item.name }}</span>
           </template>
 
           <!-- Second layer menu -->
@@ -48,7 +48,7 @@
               :key="itemChild.id"
             >
               <template slot="title">
-                <em :class="itemChild.icon" /><span class="second-menu">{{ itemChild.name }}</span>
+                <em :class="itemChild.icon" /><span class="second-menu" :style="{fontSize:(navMenuFontsize-7)+'px'}">{{ itemChild.name }}</span>
               </template>
 
               <!-- Third layer menu-->
@@ -58,7 +58,7 @@
                 :key="itemChild_Child.id"
               >
                 <em :class="itemChild_Child.icon" />
-                <span slot="title">{{ itemChild_Child.name }}</span>
+                <span slot="title" class="third-menu" :style="{fontSize:(navMenuFontsize-9)+'px'}">{{ itemChild_Child.name }}</span>
               </el-menu-item>
             </el-submenu>
 
@@ -72,6 +72,7 @@
                 slot="title"
                 class="second-menu"
                 v-html="itemChild.href=='1'? itemChild.html:itemChild.name"
+                :style="{fontSize:(navMenuFontsize-7)+'px'}"
               >{{ itemChild.name }}</span>
             </el-menu-item>
           </template>
@@ -87,6 +88,7 @@
           <span
             slot="title"
             class="first-menu"
+            :style="{fontSize:navMenuFontsize+'px'}"
           >{{ item.name }}</span>
         </el-menu-item>
       </template>
@@ -102,6 +104,10 @@ export default {
     jsonData: {
       type: Array,
       default: () => []
+    },
+    navMenuFontsize: {
+      type: Number,
+      default: 25
     }
   },
   data () {

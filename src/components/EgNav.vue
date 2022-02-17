@@ -33,6 +33,7 @@
         slot="Topbar"
         :json-data="jsonData"
         :navBgcolor="navBgcolorProp"
+        :navMenuFontsize="navMenuFontsizeProp"
       />
     </div>
     <div class="user_right rt">
@@ -99,6 +100,7 @@
         <TopbarSmall
           slot="Topbar"
           :json-data="jsonData"
+          :navMenuFontsize="navMenuFontsizeProp"
         />
       </div>
     </el-collapse-transition>
@@ -118,6 +120,10 @@ export default {
     navBgcolorProp: {
       type: String,
       default: '#3E279B'
+    },
+    navMenuFontsizeProp: {
+      type: Number,
+      default: 25
     },
     scrollTopProp: {
       type: Number,
@@ -419,11 +425,12 @@ export default {
       margin: 0 -20px;
     }
   }
-
-  @media screen and (max-width: 1090px) {
-    .main-sidebar .el-menu .first-menu{
-      font-size: 16px;
+  @media screen and (min-width: 1091px) {
+    .main-sidebar-small{
+      display: none;
     }
+  }
+  @media screen and (max-width: 1090px) {
     .logo{
       span{
         font-size: 14px;
