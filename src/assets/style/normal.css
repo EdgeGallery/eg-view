@@ -36,6 +36,21 @@ li{
   padding: 0 10%;
 }
 
+@font-face
+ {
+   font-family: defaultFont;
+   src: url(../fonts/HarmonyOS_Sans_SC_Regular.ttf);
+ }
+ @font-face
+ {
+   font-family: defaultFontBold;
+   src: url(../fonts/HarmonyOS_Sans_SC_Bold.ttf);
+ }
+ @font-face {
+  font-family: defaultFontLight;
+  src: url(../fonts/HarmonyOS_Sans_SC_Light.ttf);
+}
+
 /* 导航组件样式 */
 .el-menu--horizontal > .el-menu-item.is-active,
  .main-sidebar .el-menu.el-menu--horizontal .el-menu-item:not(.is-disabled):hover,
