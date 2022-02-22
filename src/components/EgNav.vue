@@ -37,6 +37,9 @@
       />
     </div>
     <div class="user_right rt">
+      <div class="version rt">
+        {{versionProp}}
+      </div>
       <div class="language rt">
         <span>
           <img
@@ -144,6 +147,10 @@ export default {
     jsonDataProp: {
       type: Array,
       default: () => []
+    },
+    versionProp: {
+      type: String,
+      default: ''
     }
   },
   data () {
@@ -328,6 +335,11 @@ export default {
     color: #fff;
     height: 23px;
     margin-top: 28px;
+    .version{
+      margin-left: 20px;
+      color: #bdb1e4;
+      font-family: defaultFontLight;
+    }
     .language{
       width: 23px;
       height: 23px;
