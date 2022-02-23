@@ -48,7 +48,7 @@
               :key="itemChild.id"
             >
               <template slot="title">
-                <em :class="itemChild.icon" /><span class="second-menu" :style="{fontSize:(navMenuFontsize-7)+'px'}">{{ itemChild.name }}</span>
+                <em :class="itemChild.icon" /><span class="second-menu" :style="{fontSize:navMenuFontsizeSecond+'px'}">{{ itemChild.name }}</span>
               </template>
 
               <!-- Third layer menu-->
@@ -58,7 +58,7 @@
                 :key="itemChild_Child.id"
               >
                 <em :class="itemChild_Child.icon" />
-                <span slot="title" class="third-menu" :style="{fontSize:(navMenuFontsize-9)+'px'}">{{ itemChild_Child.name }}</span>
+                <span slot="title" class="third-menu" :style="{fontSize:navMenuFontsizeThird+'px'}">{{ itemChild_Child.name }}</span>
               </el-menu-item>
             </el-submenu>
 
@@ -72,7 +72,7 @@
                 slot="title"
                 class="second-menu"
                 v-html="itemChild.href=='1'? itemChild.html:itemChild.name"
-                :style="{fontSize:(navMenuFontsize-7)+'px'}"
+                :style="{fontSize:navMenuFontsizeSecond+'px'}"
               >{{ itemChild.name }}</span>
             </el-menu-item>
           </template>
@@ -115,7 +115,9 @@ export default {
       inputVal: '',
       indexName: '',
       fromPath: '',
-      routerPath: sessionStorage.getItem('routerPath')
+      routerPath: sessionStorage.getItem('routerPath'),
+      navMenuFontsizeSecond: this.navMenuFontsize > 20 ? this.navMenuFontsize * 0.8 : (this.navMenuFontsize >= 18 ? (this.navMenuFontsize - 2) : this.navMenuFontsize),
+      navMenuFontsizeThird: this.navMenuFontsize > 20 ? this.navMenuFontsize * 0.7 : (this.navMenuFontsize >= 18 ? (this.navMenuFontsize - 2) : this.navMenuFontsize)
     }
   },
   methods: {

@@ -290,12 +290,14 @@ export default {
     setFooterListstyle () {
       this.$nextTick(() => {
         let _oDiv = document.getElementsByClassName('footer_list')[0]
+        let _oDivFooter = document.getElementsByClassName('footer_bot')[0]
         if (_oDiv) {
           _oDiv.style.background = this.footerBgcolorProp
-        }
-        let _oDivFooter = document.getElementsByClassName('footerBar')[0]
-        if (_oDivFooter) {
-          _oDivFooter.style.paddingTop = this.footerPaddingtopProp + 'px'
+          _oDiv.style.marginTop = this.footerPaddingtopProp + 'px'
+          _oDivFooter.style.marginTop = 0 + 'px'
+        } else {
+          _oDivFooter.style.marginTop = this.footerPaddingtopProp + 'px'
+          _oDiv.style.marginTop = 0 + 'px'
         }
       })
     },
