@@ -60,7 +60,7 @@
         >
       </div>
       <div
-        class="nav-tabs rt"
+        class="rt"
         v-if="!ifGuest"
       >
         <div
@@ -75,7 +75,6 @@
               v-show="showUserInfo"
             >
               <span
-                class="userAccountCenter"
                 @click="openUserAccountCenter()"
               >{{ userAccountCenter }}</span>
               <span
@@ -85,7 +84,7 @@
           </el-collapse-transition>
         </div>
       </div>
-      <div class="message rt">
+      <div class="rt">
         <slot name="Message" />
       </div>
     </div>
@@ -308,7 +307,7 @@ export default {
   .logo {
     height: 80px;
     line-height: 80px;
-    margin-right: 80px;
+    margin-right: 120px;
     display: flex;
 
     img {

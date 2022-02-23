@@ -66,7 +66,6 @@ li{
    border-bottom: none;
    letter-spacing: 1px;
    font-family: defaultFont, Arial, Helvetica, sans-serif;
-   font-size: 18px !important;
  }
  .main-sidebar .el-menu.el-menu--horizontal .el-menu-item{
    margin-right: 40px;
@@ -107,6 +106,9 @@ li{
 }
 .el-submenu__icon-arrow{
   margin-top:-3px;
+}
+.el-menu-item{
+  font-family: defaultFont, Arial, Helvetica, sans-serif;
 }
 
 /* 面包屑归一化 */
