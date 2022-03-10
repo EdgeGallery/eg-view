@@ -35,7 +35,7 @@
           :key="item.id"
         >
           <template slot="title">
-            <em :class="item.icon" /><span class="first-menu" :style="{fontSize:navMenuFontsize+'px'}">{{ item.name }}</span>
+            <em :class="item.icon" /><span class="first-menu" :style="{fontSize:navMenuFontsize+'px'}" @click="firstMenuJumpto(item.path)">{{ item.name }}</span>
           </template>
 
           <!-- Second layer menu -->
@@ -124,6 +124,11 @@ export default {
       if (index) {
         this.indexName = index
       }
+    },
+    firstMenuJumpto (path) {
+      if (path === '/appstore') {
+        this.$router.push(path)
+      }
     }
   },
   watch: {
@@ -147,10 +152,6 @@ export default {
       line-height: 80px;
       margin-right: 30px;
     }
-    .el-menu-item:not(.is-disabled):hover{
-      background: #5e40c8 !important;
-      border-bottom: 2px solid #fff !important;
-    }
     .el-submenu{
       margin-right: 30px;
     }
@@ -158,10 +159,6 @@ export default {
   .el-menu--horizontal>.el-submenu .el-submenu__title{
     height: 80px !important;
     line-height: 80px !important;
-  }
-  .el-menu--horizontal>.el-submenu .el-submenu__title:hover{
-    background: #5e40c8 !important;
-    border-bottom: 2px solid #fff !important;
   }
   .el-menu{
     display: flex;

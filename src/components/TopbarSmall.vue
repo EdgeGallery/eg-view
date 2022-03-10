@@ -37,7 +37,7 @@
           :key="item.id"
         >
           <template slot="title">
-            <em :class="item.icon" /><span class="first-menu" :style="{fontSize:navMenuFontsize+'px'}">{{ item.name }}</span>
+            <em :class="item.icon" /><span class="first-menu" :style="{fontSize:navMenuFontsize+'px'}" @click="firstMenuJumpto(item.path)">{{ item.name }}</span>
           </template>
 
           <!-- Second layer menu -->
@@ -132,6 +132,11 @@ export default {
         this.indexName = index
       }
       this.$emit('closeMenu', false)
+    },
+    firstMenuJumpto (path) {
+      if (path === '/appstore') {
+        this.$router.push(path)
+      }
     }
   },
   mounted () {
