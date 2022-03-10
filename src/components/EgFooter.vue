@@ -346,6 +346,7 @@ export default {
 .footerBar{
   width: 100%;
   z-index: 99;
+  overflow: hidden;
   .footer_list{
     padding: 50px 0;
     color: #fff;
