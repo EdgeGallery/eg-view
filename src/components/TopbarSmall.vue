@@ -134,7 +134,7 @@ export default {
       this.$emit('closeMenu', false)
     },
     firstMenuJumpto (path) {
-      if (path === '/appstore') {
+      if (path === '/appShare') {
         this.$router.push(path)
       }
     }
